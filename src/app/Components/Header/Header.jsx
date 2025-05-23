@@ -172,7 +172,7 @@ const Header = ({ isTopBar, variant }) => {
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href={menu.logoLink}>
-                  <Image src={menu.logoUrl} alt="Osmania Hospital Logo" width={100} height={40} />
+                  <img src={menu.logoUrl} alt="Osmania Hospital Logo" />
                   <div className="cs_branding_text">
                     <h2 className="text-main">OSMANIA HOSPITAL</h2>
                     <p className='p-red'>A PROJECT OF HYDERABAD RELIEF AND REHABILITATION TRUST</p>
@@ -237,7 +237,7 @@ const Header = ({ isTopBar, variant }) => {
                       </li>
                     ))}
                   </ul>
-                  {windowWidth < 1100 && (
+                  {windowWidth < 1291 && (
                     <span
                       className={`cs_menu_toggle ${
                         isShowMobileMenu && 'cs_toggle_active'
@@ -249,14 +249,14 @@ const Header = ({ isTopBar, variant }) => {
                   )}
                 </div>
                 <div className="cs_search_wrap">
-                  <div
+                  {/* <div
                     className="cs_search_toggle cs_center"
                     onClick={() => setIsSearchActive(!isSearchActive)}
                   >
                     <i>
                       <HiMiniMagnifyingGlass />
                     </i>
-                  </div>
+                  </div> */}
                   <form
                     action="#"
                     className={`cs_header_search_form ${

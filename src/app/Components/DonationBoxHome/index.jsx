@@ -5,9 +5,9 @@ const DonationBox = () => {
       {/* Top Image with Text Overlay */}
       <div className="donation-box-top">
         <div className="donation-box-top-text">
-          <h1>Donation box</h1>
-          <h1>for</h1>
-          <h1>deserving people</h1>
+          <h2>Donation box</h2>
+          <h2>for</h2>
+          <h2>deserving people</h2>
         </div>
         <div className="donation-box-top-image">
           <img src={"assets/img/banner.jpeg"} alt="Donation Banner" />
