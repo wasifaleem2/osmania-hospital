@@ -780,7 +780,7 @@ const page = () => {
       {/* End Projects Section */}
 
       {/* Start CTA Section */}
-      {/* <Section
+      <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -789,7 +789,7 @@ const page = () => {
         backgroundImage="/assets/img/cta_bg_1.jpeg"
       >
         <CtaSection1 data={ctaData1} />
-      </Section> */}
+      </Section>
       {/* End CTA Section */}
 
       {/* Start Medical Tab Section */}
