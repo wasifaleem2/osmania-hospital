@@ -1,15 +1,16 @@
 import React from 'react';
-import banner from "../../../../public/assets/img/banner.jpeg"
 const DonationBox = () => {
   return (
     <div className="donation-box-container">
       {/* Top Image with Text Overlay */}
       <div className="donation-box-top">
         <div className="donation-box-top-text">
-          <h1>Donation Box for Deserving People</h1>
+          <h1>Donation box</h1>
+          <h1>for</h1>
+          <h1>deserving people</h1>
         </div>
         <div className="donation-box-top-image">
-          <img src={banner} alt="Donation Banner" />
+          <img src={"assets/img/banner.jpeg"} alt="Donation Banner" />
         </div>
       </div>
 
@@ -17,7 +18,11 @@ const DonationBox = () => {
       <div className="donation-box-content">
         {/* Left Image */}
         <div className="donation-box-left-image">
-          <img src="path_to_left_image" alt="Deserving people" />
+          <img src="assets/img/osmania-logo.png" alt="Deserving people" />
+          {/* <div>
+            <p>OSMANIA HOSPITAL</p>
+            <p>DONATE NOW</p>
+          </div> */}
         </div>
 
         {/* Donation Details */}

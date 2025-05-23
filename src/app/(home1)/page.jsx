@@ -14,6 +14,9 @@ import MedicalTabSection from '../Components/MedicalTabSection';
 import ContactSection2 from '../Components/ContactSection/ContactSection2';
 import BlogSection from '../Components/BlogsSection';
 import DonationBox from '../Components/DonationBoxHome';
+import BoardOfTrustees from '../Components/BoardOfTrustees';
+import TopVideo from '../Components/TopVideo';
+import ReportDownloadWidget from '../Components/ReportDownloadWidget';
 
 const heroData = {
     primarySlider: [
@@ -251,6 +254,63 @@ const heroData = {
         name: 'Dr. David Wilson',
         profession: 'Neurologist',
         imageUrl: '/assets/img/team_6.jpg',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+    ],
+  };
+
+  const BoardTrusteesData = {
+    subtitle: 'MEMBERS',
+    title: 'Board Of Trustees',
+    sliderData: [
+      {
+        name: 'Dr. Norma Pedric',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/member-dummy.jpg',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. James Lewis',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/member-dummy.jpg',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. Sophia Anderson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/member-dummy.jpg',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. Michael Thompson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/member-dummy.jpg',
+        link: '/doctors/doctor-details',
+        facebook: '/',
+        pinterest: '/',
+        twitter: '/',
+        instagram: '/',
+      },
+      {
+        name: 'Dr. Michael Thompson',
+        profession: 'Neurologist',
+        imageUrl: '/assets/img/member-dummy.jpg',
         link: '/doctors/doctor-details',
         facebook: '/',
         pinterest: '/',
@@ -542,7 +602,26 @@ const heroData = {
       // Add other tab data here
     ],
   };
-  
+
+  // const BoardTrusteesData = {
+  //   sectionTitle: 'Members',
+  //   sectionSubtitle: 'Board Of Trustees',
+  //   postsData: [
+  //     {
+  //       memberImage: "/assets/img/member-dummy.jpg"
+  //     },
+  //     {
+  //       memberImage: "/assets/img/member-dummy.jpg"
+  //     },
+  //     {
+  //       memberImage: "/assets/img/member-dummy.jpg"
+  //     },
+  //     {
+  //       memberImage: "/assets/img/member-dummy.jpg"
+  //     },
+  //   ],
+  // };
+
   const blogsData = {
     sectionTitle: 'OUR LARGEST BLOG',
     sectionSubtitle: 'Latest Posts &amp; Articles',
@@ -606,60 +685,21 @@ const page = () => {
     return (
         <div>
         {/* Start Hero Section */}
-        <HeroSection data={heroData} />
+        {/* <HeroSection data={heroData} /> */}
         {/* End Hero Section */}
 
+      <TopVideo />
+
       {/* Start CTA Section */}
-      <Section
+      {/* <Section
         className={
           'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
         }
       >
         <CtaSection data={ctaData} />
-      </Section>
-      
-      <Section
-        className={
-          'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
-        }
-      >
-        <DonationBox />
-      </Section>
+      </Section> */}
 
-      {/* End CTA Section */}
-
-      {/* Start About Section */}
-      <Section
-        topSpaceLg="80"
-        topSpaceMd="120"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className="cs_about cs_style_1 position-relative"
-      >
-        <About data={aboutData} />
-      </Section>
-      {/* End About Section */}
-
-      {/* Start Counter */}
-      <Section className="cs_counter_area cs_gray_bg">
-        <CounterSection data={countersData} />
-      </Section>
-      {/* End Counter */}
-
-      {/* Start Service Section */}
-      <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className={'cs_gray_bg'}
-      >
-        <Service cardBg={'cs_gray_bg'} data={serviceData} />
-      </Section>
-      {/* End Service Section */}
-
-      {/* Start Team Section */}
-      <Section
+      {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         className={'cs_team_section position-relative'}
@@ -669,18 +709,59 @@ const page = () => {
           variant={'cs_pagination cs_style_2'}
           data={teamData}
         />
-      </Section>
-      {/* End Team Section */}
+      </Section> */}
+      
+      <DonationBox />
+      <ReportDownloadWidget />
+      {/* <Section
+        className={
+          'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
+        }
+      >
+        <DonationBox />
+      </Section> */}
+
+      {/* End CTA Section */}
+
+      {/* Start About Section */}
+      {/* <Section
+        topSpaceLg="80"
+        topSpaceMd="120"
+        bottomSpaceLg="80"
+        bottomSpaceMd="120"
+        className="cs_about cs_style_1 position-relative"
+      >
+        <About data={aboutData} />
+      </Section> */}
+      {/* End About Section */}
+
+      {/* Start Counter */}
+      {/* <Section className="cs_counter_area cs_gray_bg">
+        <CounterSection data={countersData} />
+      </Section> */}
+      {/* End Counter */}
+
+      {/* Start Service Section */}
+      {/* <Section
+        topSpaceLg="70"
+        topSpaceMd="110"
+        bottomSpaceLg="80"
+        bottomSpaceMd="120"
+        className={'cs_gray_bg'}
+      >
+        <Service cardBg={'cs_gray_bg'} data={serviceData} />
+      </Section> */}
+      {/* End Service Section */}
 
       {/* Start Brand Section */}
-      <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
+      {/* <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
         <BrandsSlider data={brandData} />
-      </Section>
+      </Section> */}
 
       {/* End Brand Section */}
 
       {/* Start Why Choose Us Section */}
-      <Section
+      {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -689,17 +770,17 @@ const page = () => {
         backgroundImage="/assets/img/service_bg_2.jpg"
       >
         <ChooseUs data={sectionData} />
-      </Section>
+      </Section> */}
       {/* End Why Choose Us Section */}
 
       {/* Start Projects Section */}
-      <Section topSpaceLg="70" topSpaceMd="110" className="cs_tabs">
+      {/* <Section topSpaceLg="70" topSpaceMd="110" className="cs_tabs">
         <ProjectSection data={projectData} />
-      </Section>
+      </Section> */}
       {/* End Projects Section */}
 
       {/* Start CTA Section */}
-      <Section
+      {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -708,17 +789,17 @@ const page = () => {
         backgroundImage="/assets/img/cta_bg_1.jpeg"
       >
         <CtaSection1 data={ctaData1} />
-      </Section>
+      </Section> */}
       {/* End CTA Section */}
 
       {/* Start Medical Tab Section */}
-      <Section topSpaceLg="70" topSpaceMd="110">
+      {/* <Section topSpaceLg="70" topSpaceMd="110">
         <MedicalTabSection data={medicalTabsData} />
-      </Section>
+      </Section> */}
       {/* End Medical Tab Section */}
 
       {/* Start Contact Solution */}
-      <ContactSection2></ContactSection2>
+      {/* <ContactSection2></ContactSection2> */}
       {/* End Contact Solution */}
 
       {/* Start Blog Section */}
@@ -728,8 +809,18 @@ const page = () => {
         bottomSpaceLg="80"
         bottomSpaceMd="120"
       >
-        <BlogSection data={blogsData} />
+        <BoardOfTrustees data={BoardTrusteesData} hr={true}
+          variant={'cs_pagination cs_style_2'} />
       </Section>
+
+      {/* <Section
+        topSpaceLg="70"
+        topSpaceMd="110"
+        bottomSpaceLg="80"
+        bottomSpaceMd="120"
+      >
+        <BlogSection data={blogsData} />
+      </Section> */}
       {/* End Blog Solution */}
 
         </div>

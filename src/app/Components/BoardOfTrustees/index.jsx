@@ -1,25 +1,32 @@
-"use client"
+'use client';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPinterestP,
+  FaTwitter,
+} from "react-icons/fa";
 import Slider from "react-slick";
-import Button from "../Buttons";
-import { FaAngleRight } from "react-icons/fa6";
 import SectionHeading from "../SectionHeading";
+import Spacing from "../Spacing";
 import Link from "next/link";
 import Image from "next/image";
 
-const BoardOfTrustees = ({ data }) => {
+const BoardOfTrustees = ({ data, bgColor, variant, hr }) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
-    fade: false,
+    slidesToShow: 4,
     swipeToSlide: true,
     appendDots: (dots) => (
-      <div>
-        <ul>{dots}</ul>
-      </div>
-    ),
-    dotsClass: "cs_pagination cs_style_2",
+    <div className="custom-dots-container">
+      <ul>{dots}</ul>
+    </div>
+  ),
+  customPaging: () => (
+    <div className="custom-dot"></div>
+  ),
+    dotsClass: `slick-dots ${variant}`,
     responsive: [
       {
         breakpoint: 1199,
@@ -35,12 +42,13 @@ const BoardOfTrustees = ({ data }) => {
       },
     ],
   };
+
   return (
-    <>
+    <div className="about-team">
       <div className="container">
         <SectionHeading
-          SectionSubtitle={data.sectionTitle}
-          SectionTitle={data.sectionSubtitle}
+          SectionSubtitle={data.subtitle}
+          SectionTitle={data.title}
           variant={"text-center"}
         />
 
@@ -49,47 +57,50 @@ const BoardOfTrustees = ({ data }) => {
           <div className="cs_slider_container">
             <div className="cs_slider_wrapper">
               <Slider {...settings}>
-                {data.postsData.map((post, index) => (
-                  <div key={index} className="cs_slide">
-                    <article className="cs_post cs_style_1">
-                      <Link
-                        href={post.postLink}
-                        className="cs_post_thumbnail position-relative"
-                      >
-                        <Image src={post.thumbnail} alt="img" width={396} height={280}   />
-                        <div className="cs_post_category position-absolute">
-                          {post.category}
-                        </div>
+                {data?.sliderData.map((item, index) => (
+                  <div className="cs_slide" key={index}>
+                    <div
+                      className={`cs_team cs_style_1 ${
+                        bgColor ? "cs_accent_bg" : "cs_blue_bg"
+                      } `}
+                    >
+                      <div
+                        className={`cs_team_shape ${
+                          bgColor ? "cs_blue_bg" : "cs_accent_bg "
+                        }`}
+                      />
+                      <Link href={item.link} className="cs_team_thumbnail">
+                      <img src={item.imageUrl} alt="img"   />
                       </Link>
-                      <div className="cs_post_content position-relative">
-                        <div className="cs_post_meta_wrapper">
-                          <div className="cs_posted_by cs_center position-absolute">
-                            {post.date}
-                          </div>
-                          <div className="cs_post_meta_item">
-                          <Image src={post.authorIcon} alt="img" width={15} height={14}   />
-                            <span>By: {post.author}</span>
-                          </div>
-                          <div className="cs_post_meta_item">
-                          <Image src={post.commentIcon} alt="img" width={14} height={13}   />
-                            <span>Comment</span>
-                          </div>
-                        </div>
-                        <h3 className="cs_post_title">
-                          <Link href={post.postLink}>{post.title}</Link>
+                      <div className="cs_team_bio">
+                        <h3 className="cs_team_title cs_extra_bold mb-0">
+                          <Link href={item.link}>{item.name}</Link>
                         </h3>
-                        <p className="cs_post_subtitle">{post.subtitle}</p>
-
-                        <Button
-                          variant={"cs_post_btn"}
-                          btnIcons={<FaAngleRight />}
-                          btnUrl={post.postLink}
-                          btnText={post.btnText}
-                        />
-
-                        <div className="cs_post_shape position-absolute" />
+                        <p className="cs_team_subtitle">{item.profession}</p>
+                        <div className="cs_social_btns cs_style_1">
+                          <Link href={item.facebook} className="cs_center">
+                            <i>
+                              <FaFacebookF />
+                            </i>
+                          </Link>
+                          <Link href={item.pinterest} className="cs_center">
+                            <i>
+                              <FaPinterestP />
+                            </i>
+                          </Link>
+                          <Link href={item.twitter} className="cs_center">
+                            <i>
+                              <FaTwitter />
+                            </i>
+                          </Link>
+                          <Link href={item.instagram} className="cs_center">
+                            <i>
+                              <FaInstagram />
+                            </i>
+                          </Link>
+                        </div>
                       </div>
-                    </article>
+                    </div>
                   </div>
                 ))}
               </Slider>
@@ -97,7 +108,15 @@ const BoardOfTrustees = ({ data }) => {
           </div>
         </div>
       </div>
-    </>
+      {bgColor && (
+        <div className="cs_team_bg_dark cs_blue_bg">
+          <div className="cs_team_bg_white cs_white_bg" />
+        </div>
+      )}
+      <Spacing lg={80} md={120} />
+
+      {hr && <hr />}
+    </div>
   );
 };
 
