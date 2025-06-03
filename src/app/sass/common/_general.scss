@@ -1680,8 +1680,9 @@ label {
 }
 
 .cs_page_heading {
-  height: 610px;
+  height: 400px;
   padding: 130px 0 50px;
+  background-color: rgb(233, 233, 233);
   @media (max-width: 991px) {
     height: 420px;
   }

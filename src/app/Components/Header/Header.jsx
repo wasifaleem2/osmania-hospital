@@ -65,9 +65,9 @@ const Header = ({ isTopBar, variant }) => {
         label: 'Medical Service',
         href: '/service',
         subItems: [
-          { label: 'Our Services', href: '/service' },
-          { label: 'Clinical Department & Faculty', href: '/service/department-and-faculty' },
-          { label: 'List Of Consultants', href: '/service/list-of-consultants' },
+          { label: 'Our Services', href: '/our-services' },
+          { label: 'Clinical Department & Faculty', href: '/department&Faculty' },
+          { label: 'List Of Consultants', href: '/list-of-consultants' },
         ],
       },
       {

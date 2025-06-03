@@ -1,66 +1,153 @@
-import { FaAngleDoubleRight } from 'react-icons/fa';
-import SectionHeading from '../SectionHeading';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
 
-const Service = ({ data, cardBg }) => {
+import {
+  FaHospitalAlt,
+  FaVial,
+  FaXRay,
+  FaCapsules,
+  FaBaby,
+  FaBed,
+  FaProcedures,
+  FaTooth,
+  FaEye,
+  FaHeartbeat,
+  FaWaveSquare,
+  FaMicrophone,
+  FaRunning,
+  FaAngleDoubleRight,
+  FaLungs,
+  FaStethoscope,
+  FaBrain,
+  FaMicroscope,
+  FaUsers,
+  FaSyringe,
+  FaVials,
+  FaBone,
+  FaFlask,
+  FaNutritionix,
+} from "react-icons/fa";
+import { FaScissors, FaUserDoctor } from "react-icons/fa6";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../../sass/module/service.module.scss";
+
+const Service = ({ data }) => {
+  // const data = {
+  //   subtitle: 'OUR BEST SERVICE',
+  //   title: 'High-Quality Medical Services',
+  //   description: 'We provide comprehensive healthcare solutions with state-of-the-art technology and compassionate care for all your medical needs.',
+  //   services: [
+  //     { index: '01', title: '24 Hours Emergency', subtitle: 'Round-the-clock emergency medical care', icon: 'FaHospitalAlt', link: '/service/24-hours-emergency' },
+  //     { index: '02', title: '24 Hours Laboratory', subtitle: 'Full-time diagnostic and medical testing', icon: 'FaVial', link: '/service/24-hours-laboratory' },
+  //     { index: '03', title: '24 Hours X-Ray', subtitle: 'Accurate and immediate X-ray imaging services', icon: 'FaXRay', link: '/service/24-hours-x-ray' },
+  //     { index: '04', title: '24 Hours Pharmacy', subtitle: 'Access to essential medicines at any time', icon: 'FaCapsules', link: '/service/24-hours-pharmacy' },
+  //     { index: '05', title: 'NICU', subtitle: 'Specialized neonatal intensive care for newborns', icon: 'FaBaby', link: '/service/nicu' },
+  //     { index: '06', title: 'Well Equipped Labor Room', subtitle: 'Comfortable and safe maternity care', icon: 'FaBed', link: '/service/well-equipped-labor-room' },
+  //     { index: '07', title: 'Operation Theater', subtitle: 'Advanced surgical facilities for critical procedures', icon: 'FaScissors', link: '/service/operation-theater' },
+  //     { index: '08', title: 'Special Care Unit', subtitle: 'Dedicated care for high-risk patients', icon: 'FaProcedures', link: '/service/special-care-unit' },
+  //     { index: '09', title: 'Dental Clinic', subtitle: 'Comprehensive oral health and dentistry services', icon: 'FaTooth', link: '/service/dental-clinic' },
+  //     { index: '10', title: 'Eye Clinic', subtitle: 'Vision care and eye treatment services', icon: 'FaEye', link: '/service/eye-clinic' },
+  //     { index: '11', title: 'Echocardiography', subtitle: 'Advanced heart imaging for precise diagnosis', icon: 'FaHeartbeat', link: '/service/echocardiography' },
+  //     { index: '12', title: 'Ultrasound', subtitle: 'Non-invasive imaging for medical diagnosis', icon: 'FaWaveSquare', link: '/service/ultrasound' },
+  //     { index: '13', title: 'Speech Therapy Center', subtitle: 'Professional therapy for speech and language disorders', icon: 'FaMicrophone', link: '/service/speech-therapy-center' },
+  //     { index: '14', title: 'Physiotherapy', subtitle: 'Rehabilitation and movement therapy services', icon: 'FaRunning', link: '/service/physiotherapy' },
+  //   ],
+  //   footerIcon: '/assets/img/icons/service_footer_icon_1.png',
+  //   footerText: 'Delivering tomorrow\'s health care for your family today. Our dedicated team is committed to your wellbeing.',
+  //   footerLink: '/services',
+  //   footerLinkText: 'Explore All Services',
+  // };
+
+  const IconComponent = ({ iconName }) => {
+    const icons = {
+      FaHospitalAlt: FaHospitalAlt,
+      FaVial: FaVial,
+      FaXRay: FaXRay,
+      FaCapsules: FaCapsules,
+      FaBaby: FaBaby,
+      FaBed: FaBed,
+      FaScissors: FaScissors,
+      FaProcedures: FaProcedures,
+      FaTooth: FaTooth,
+      FaEye: FaEye,
+      FaHeartbeat: FaHeartbeat,
+      FaWaveSquare: FaWaveSquare,
+      FaMicrophone: FaMicrophone,
+      FaRunning: FaRunning,
+
+      FaUserDoctor: FaUserDoctor,
+      FaNutritionix: FaNutritionix,
+      FaBrain: FaBrain,
+      FaLungs: FaLungs,
+      FaStethoscope: FaStethoscope,
+      FaSyringe: FaSyringe,
+      FaUsers: FaUsers,
+      FaFlask: FaFlask,
+      FaBone: FaBone,
+      FaMicroscope: FaMicroscope,
+    };
+
+    const Icon = icons[iconName];
+    return Icon ? <Icon /> : null;
+  };
+
   return (
-    <>
-      <div className="container">
-        <SectionHeading
-          variant={'cs_type_1'}
-          SectionTitle={data.title}
-          SectionSubtitle={data.subtitle}
-          SectionDescription={data.description}
+    <div className={styles.serviceContainer}>
+      <div className={styles.sectionHeader}>
+        <p className={styles.subtitle}>{data.subtitle}</p>
+        <h2 className={styles.title}>{data.title}</h2>
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: data.description }}
         />
-        <div className="cs_height_50 cs_height_lg_50" />
-        <div className="row cs_row_gap_30 cs_gap_y_30">
-          {data?.services.map((service, index) => (
-            <div key={index} className="col-xl-3 col-lg-4 col-sm-6">
-              <div
-                className={`cs_iconbox cs_style_2 cs_radius_15 cs_hover_layer_2 ${
-                  cardBg ? '' : 'cs_gray_bg'
-                }`}
-              >
-                <div
-                  className="cs_iconbox_overlay cs_bg_filed"
-                  style={{
-                    backgroundImage: `url(${service.backgroundImage})`,
-                  }}
-                />
-                <div className="cs_iconbox_shape" />
-                <div className="cs_iconbox_header d-flex align-items-center justify-content-between">
-                  <div className="cs_iconbox_icon cs_center">
-                  <Image src={service.iconUrl} alt="img" width={26} height={25}   />
-                  </div>
-                  <h3 className="iconbox_index">{service.index}</h3>
-                </div>
-                <h3 className="cs_iconbox_title">
-                  <Link href={service.link}>{service.title}</Link>
-                </h3>
-                <p className="cs_iconbox_subtitle m-0">{service.subtitle}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="cs_service_footer" data-aos="fade-up">
-          <div className="cs_service_footer_icon">
-          <Image src={data.footerIcon} alt="img" width={22} height={20}   />
-          </div>
-          <div className="cs_service_footer_text cs_medium">
-            <span dangerouslySetInnerHTML={{ __html: data.footerText }} />
-            <Link href={data.footerLink}>
-              {data.footerLinkText}
-              <span>
-                <i>
-                  <FaAngleDoubleRight />
-                </i>
-              </span>
-            </Link>
-          </div>
-        </div>
       </div>
-    </>
+
+      <div className={styles.servicesGrid}>
+        {data.services.map((service) => (
+          <div key={service.index} className={styles.serviceCard}>
+            <div className={styles.cardHeader}>
+              <div className={styles.cardIcon}>
+                <IconComponent iconName={service.icon} />
+              </div>
+              <span className={styles.cardIndex}>{service.index}</span>
+            </div>
+
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>
+                <Link href={service.link}>{service.title}</Link>
+              </h3>
+              <p className={styles.cardSubtitle}>{service.subtitle}</p>
+
+              <Link href={service.link} className={styles.readMore}>
+                Read More
+                <span className={styles.arrow}>
+                  <FaAngleDoubleRight />
+                </span>
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* <div className={styles.serviceFooter}>
+        <div className={styles.serviceFooterIcon}>
+          <Image
+            src={data.footerIcon}
+            alt="Healthcare Services"
+            width={40}
+            height={40}
+          />
+        </div>
+        <p
+          className={styles.serviceFooterText}
+          dangerouslySetInnerHTML={{ __html: data.footerText }}
+        />
+        <Link href={data.footerLink} className={styles.serviceFooterLink}>
+          {data.footerLinkText}
+          <span><FaAngleDoubleRight /></span>
+        </Link>
+      </div> */}
+    </div>
   );
 };
 
