@@ -43,42 +43,75 @@ const Header = ({ isTopBar, variant }) => {
       {
         label: 'Home',
         href: '/',
+        // subItems: [
+        //   { label: 'Main Home', href: '/' },
+        //   { label: 'Home V2', href: '/home-v2' },
+        //   { label: 'Home V3', href: '/home-v3' },
+        // ],
+      },
+      { label: 'About Us', href: '/about', 
         subItems: [
-          { label: 'Main Home', href: '/' },
-          { label: 'Home V2', href: '/home-v2' },
-          { label: 'Home V3', href: '/home-v3' },
+          { label: 'Vission & Mission', href: '/about/vission-mission' },
+          { label: 'History', href: '/about/history' },
+          { label: 'Introduction', href: '/about/introduction' },
+          { label: 'Facts & Figures', href: '/about/facts-figures' },
+          { label: 'Board Of Trustees', href: '/about/board-of-trustees' },
+          { label: 'Management', href: '/about/management' },
+          { label: 'Policies', href: '/about/policies' },
+          { label: 'Contact Us', href: '/contact-us' },
         ],
       },
-      { label: 'About', href: '/about' },
       {
-        label: 'Service',
+        label: 'Medical Service',
         href: '/service',
         subItems: [
-          { label: 'Service', href: '/service' },
-          { label: 'Service Details', href: '/service/service-details' },
+          { label: 'Our Services', href: '/service' },
+          { label: 'Clinical Department & Faculty', href: '/service/department-and-faculty' },
+          { label: 'List Of Consultants', href: '/service/list-of-consultants' },
         ],
       },
       {
-        label: 'Blog',
-        href: '/blog',
+        label: 'Help Us',
+        href: '/help-us',
         subItems: [
-          { label: 'Blog List', href: '/blog' },
-          { label: 'Blog Details', href: '/blog/blog-details' },
+          { label: 'Zakat', href: '/zakat' },
+          { label: 'Donations', href: '/donations' },
+          { label: 'Sponsor An Equipment', href: '/sponsor-equipment' },
         ],
       },
+      { label: 'News & Events', href: '/news-events' },
+      { label: 'Photo Gallery', href: '/gallery' },
       {
-        label: 'Pages',
-        href: '/',
+        label: 'Welfare Activities',
+        href: '/welfare',
         subItems: [
-          { label: 'Appointments', href: '/appointments' },
-          { label: 'Doctors', href: '/doctors' },
-          { label: 'Doctor Details', href: '/doctors/doctor-details' },
-          { label: 'Timetable', href: '/timetable' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Distribution Of Food Ration', href: '/zakat' },
+          { label: 'Distribution Of Blanket & Quilts', href: '/donations' },
+          { label: 'Tohfa-e-Eid', href: '/sponsor-equipment' },
         ],
       },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Certifications', href: '/certifications' },
+      // {
+      //   label: 'Blog',
+      //   href: '/blog',
+      //   subItems: [
+      //     { label: 'Blog List', href: '/blog' },
+      //     { label: 'Blog Details', href: '/blog/blog-details' },
+      //   ],
+      // },
+      // {
+      //   label: 'Pages',
+      //   href: '/',
+      //   subItems: [
+      //     { label: 'Appointments', href: '/appointments' },
+      //     { label: 'Doctors', href: '/doctors' },
+      //     { label: 'Doctor Details', href: '/doctors/doctor-details' },
+      //     { label: 'Timetable', href: '/timetable' },
+      //     { label: 'Portfolio', href: '/portfolio' },
+      //     { label: 'Contact', href: '/contact' },
+      //   ],
+      // },
+      // { label: 'Contact', href: '/contact' },
     ],
     btnUrl: '/contact',
     btnText: 'Contact Now',
@@ -277,12 +310,12 @@ const Header = ({ isTopBar, variant }) => {
                     </div>
                   </form>
                 </div>
-                <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1">
+                {/* <Link href={menu.btnUrl} className="cs_btn cs_style_1 cs_color_1">
                   <span>{menu.btnText}</span>
                   <i>
                     <FaAnglesRight />
                   </i>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
