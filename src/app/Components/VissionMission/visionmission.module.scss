@@ -1,0 +1,92 @@
+.container {
+  padding: 4rem 2rem;
+  //   background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visionSection,
+.missionSection {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  //   color: #2a6496;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+  }
+}
+
+.sectionText {
+  color: var(--light-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.missionList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.missionItem {
+  padding: 1rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--light-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  &::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .visionSection,
+  .missionSection {
+    padding: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionText,
+  .missionItem {
+    font-size: 1rem;
+  }
+}
