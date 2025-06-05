@@ -12,7 +12,7 @@ const DonationBox = () => {
           <h2 className={styles.heroTitle}>Donation Box</h2>
           <h3 className={styles.heroSubtitle}>Support Deserving People</h3>
           <div className={styles.heroDivider}></div>
-          <p className={styles.heroText}>Your contribution makes a difference in someone's life</p>
+          <p className={styles.heroText}>Your contribution makes a difference in someone&apos;s life</p>
         </div>
       </div>
 
