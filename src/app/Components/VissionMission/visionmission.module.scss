@@ -21,7 +21,7 @@
 .sectionTitle {
   //   color: #2a6496;
   color: var(--primary-color);
-  font-size: 1.8rem;
+  font-size: 24px;
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
@@ -39,7 +39,7 @@
 
 .sectionText {
   color: var(--light-text);
-  font-size: 1.1rem;
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -53,13 +53,13 @@
   padding-left: 2rem;
   position: relative;
   color: var(--light-text);
-  font-size: 1.1rem;
+  font-size: 20px;
   line-height: 1.6;
 
   &::before {
     content: "•";
     color: var(--secondary-color);
-    font-size: 2rem;
+    font-size: 24px;
     position: absolute;
     left: 0;
     top: 0.5rem;
@@ -82,11 +82,11 @@
   }
 
   .sectionTitle {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 
   .sectionText,
   .missionItem {
-    font-size: 1rem;
+    font-size: 17px;
   }
 }
