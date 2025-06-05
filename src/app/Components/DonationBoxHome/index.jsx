@@ -1,52 +1,101 @@
 import React from 'react';
+import styles from './donationbox.module.scss';
+
 const DonationBox = () => {
+  const donationAmounts = [1000, 2000, 5000, 10000];
+  
   return (
-    <div className="donation-box-container">
-      {/* Top Image with Text Overlay */}
-      <div className="donation-box-top">
-        <div className="donation-box-top-text">
-          <h2>Donation box</h2>
-          <h2>for</h2>
-          <h2>deserving people</h2>
-        </div>
-        <div className="donation-box-top-image">
-          <img src={"assets/img/banner.jpeg"} alt="Donation Banner" />
+    <div className={styles.donationBox}>
+      {/* Hero Section with Overlay */}
+      <div className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h2 className={styles.heroTitle}>Donation Box</h2>
+          <h3 className={styles.heroSubtitle}>Support Deserving People</h3>
+          <div className={styles.heroDivider}></div>
+          <p className={styles.heroText}>Your contribution makes a difference in someone's life</p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="donation-box-content">
-        {/* Left Image */}
-        <div className="donation-box-left-image">
-          <img src="assets/img/osmania-logo.png" alt="Deserving people" />
-          {/* <div>
-            <p>OSMANIA HOSPITAL</p>
-            <p>DONATE NOW</p>
-          </div> */}
+      <div className={styles.content}>
+        {/* Hospital Logo */}
+        <div className={styles.logoSection}>
+          <div className={styles.logoContainer}>
+            <img 
+              src="assets/img/osmania-logo.png" 
+              alt="Osmania Hospital Logo" 
+              className={styles.logo}
+            />
+            <div className={styles.logoGlow}></div>
+          </div>
+          <h3 className={styles.logoTitle}>Hyderabad Trust</h3>
+          <p className={styles.logoSubtitle}>Osmania Hospital</p>
         </div>
 
         {/* Donation Details */}
-        <div className="donation-box-details">
-          <h2>Osmania Hospital - Donate Now</h2>
-          <p>Donations can be deposited directly in the following bank account.</p>
-          <p><strong>Title of Account:</strong> Hyderabad Relief and Rehabilitation Trust</p>
-          <p><strong>Account No.:</strong> 0105-8020-1003-0799</p>
-          <p><strong>IBAN:</strong> PK78MUCB0105802010030799</p>
-          <p><strong>Bank:</strong> MCB Bank Ltd.</p>
+        <div className={styles.donationSection}>
+          <h2 className={styles.sectionTitle}>Make a Donation</h2>
+          <p className={styles.sectionText}>
+            Your generous donations help us provide medical care to those in need.
+            Please contribute to our cause by donating to the following account:
+          </p>
 
-          {/* Input Field */}
-          <div className="donation-box-input">
-            <label htmlFor="account">Enter Account:</label>
-            <input type="text" id="account" name="account" />
+          <div className={styles.bankDetails}>
+            <div className={styles.detailItem}>
+              <span className={styles.detailLabel}>Account Title:</span>
+              <span className={styles.detailValue}>Hyderabad Relief and Rehabilitation Trust</span>
+            </div>
+            <div className={styles.detailItem}>
+              <span className={styles.detailLabel}>Account No.:</span>
+              <span className={styles.detailValue}>0105-8020-1003-0799</span>
+            </div>
+            <div className={styles.detailItem}>
+              <span className={styles.detailLabel}>IBAN:</span>
+              <span className={styles.detailValue}>PK78MUCB0105802010030799</span>
+            </div>
+            <div className={styles.detailItem}>
+              <span className={styles.detailLabel}>Bank:</span>
+              <span className={styles.detailValue}>MCB Bank Ltd.</span>
+            </div>
           </div>
 
-          {/* Donation Amount Options */}
-          <div className="donation-box-amounts">
-            <button>1,000</button>
-            <button>2,000</button>
-            <button>5,000</button>
-            <button>10,000</button>
-          </div>
+          {/* Custom Amount Input */}
+          {/* <div className={styles.amountInput}>
+            <label htmlFor="donationAmount" className={styles.inputLabel}>
+              Enter Account Number:
+            </label>
+            <div className={styles.inputGroup}>
+              <span className={styles.currency}>Rs.</span>
+              <input
+                type="number"
+                id="donationAmount"
+                className={styles.amountField}
+                placeholder="Enter amount"
+                min="100"
+              />
+            </div>
+          </div> */}
+
+          {/* Quick Donation Buttons */}
+          {/* <div className={styles.quickDonations}>
+            <h4 className={styles.quickDonationTitle}>Or select a quick amount:</h4>
+            <div className={styles.amountButtons}>
+              {donationAmounts.map((amount) => (
+                <button 
+                  key={amount} 
+                  className={styles.amountButton}
+                >
+                  Rs. {amount.toLocaleString()}
+                </button>
+              ))}
+            </div>
+          </div> */}
+
+          {/* Donate Button */}
+          {/* <button className={styles.donateButton}>
+            Proceed to Donation
+            <span className={styles.buttonIcon}>→</span>
+          </button> */}
         </div>
       </div>
     </div>
