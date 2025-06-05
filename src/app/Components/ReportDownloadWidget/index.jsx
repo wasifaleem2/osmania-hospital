@@ -19,16 +19,16 @@ const ReportDownloadWidget = () => {
 
   return (
     <div className="report-widget">
-      <div className="report-widget__icon">
+      {/* <div className="report-widget__icon">
         <img src="assets/img/stethoscope2.jpeg" alt="Stethoscope" />
-      </div>
+      </div> */}
       <div className="report-widget__form">
         <div className="report-widget-header">
           <div className="hospital-logo-box">
             <img src="assets/img/osmania-logo.png" alt="Hospital Logo" className="hospital-logo" />
             <h2>OSMANIA HOSPITAL</h2>
           </div>
-          <h3>LIBRARY REPORT DOWNLOAD</h3>
+          <h3>LABORATORY REPORT DOWNLOAD</h3>
         </div>
         
         <div className="input-section">
