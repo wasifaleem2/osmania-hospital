@@ -80,7 +80,7 @@ const Header = ({ isTopBar, variant }) => {
         ],
       },
       { label: 'News & Events', href: '/news-events' },
-      { label: 'Photo Gallery', href: '/gallery' },
+      // { label: 'Photo Gallery', href: '/gallery' },
       {
         label: 'Welfare Activities',
         href: '/welfare',
@@ -270,7 +270,7 @@ const Header = ({ isTopBar, variant }) => {
                       </li>
                     ))}
                   </ul>
-                  {windowWidth < 1291 && (
+                  {windowWidth < 1366 && (
                     <span
                       className={`cs_menu_toggle ${
                         isShowMobileMenu && 'cs_toggle_active'
