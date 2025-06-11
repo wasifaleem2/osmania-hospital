@@ -76,7 +76,7 @@ const Header = ({ isTopBar, variant }) => {
         subItems: [
           { label: 'Zakat', href: '/zakat' },
           { label: 'Donations', href: '/donations' },
-          { label: 'Sponsor An Equipment', href: '/sponsor-equipment' },
+          { label: 'Sponsor An Equipment', href: '/sponsor-an-equipment' },
         ],
       },
       { label: 'News & Events', href: '/news-events' },
