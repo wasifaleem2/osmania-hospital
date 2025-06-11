@@ -94,8 +94,8 @@ const Service = ({ data }) => {
   return (
     <div className={styles.serviceContainer}>
       <div className={styles.sectionHeader}>
-        <p className={styles.subtitle}>{data.subtitle}</p>
-        <h2 className={styles.title}>{data.title}</h2>
+        {/* <p className={styles.subtitle}>{data.subtitle}</p> */}
+        <h2 className="main-title">{data.title}</h2>
         <p
           className={styles.description}
           dangerouslySetInnerHTML={{ __html: data.description }}
