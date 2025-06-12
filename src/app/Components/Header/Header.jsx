@@ -83,12 +83,12 @@ const Header = ({ isTopBar, variant }) => {
       // { label: 'Photo Gallery', href: '/gallery' },
       {
         label: 'Welfare Activities',
-        href: '/welfare',
-        subItems: [
-          { label: 'Distribution Of Food Ration', href: '/zakat' },
-          { label: 'Distribution Of Blanket & Quilts', href: '/donations' },
-          { label: 'Tohfa-e-Eid', href: '/sponsor-equipment' },
-        ],
+        href: '/welfare-activities',
+        // subItems: [
+        //   { label: 'Distribution Of Food Ration', href: '/zakat' },
+        //   { label: 'Distribution Of Blanket & Quilts', href: '/donations' },
+        //   { label: 'Tohfa-e-Eid', href: '/sponsor-equipment' },
+        // ],
       },
       { label: 'Certifications', href: '/certifications' },
       // {
