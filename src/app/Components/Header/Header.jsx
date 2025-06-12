@@ -79,7 +79,7 @@ const Header = ({ isTopBar, variant }) => {
           { label: 'Sponsor An Equipment', href: '/sponsor-an-equipment' },
         ],
       },
-      { label: 'News & Events', href: '/news-events' },
+      { label: 'News & Events', href: '/news&events' },
       // { label: 'Photo Gallery', href: '/gallery' },
       {
         label: 'Welfare Activities',
