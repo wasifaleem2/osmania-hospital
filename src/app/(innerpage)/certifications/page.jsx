@@ -24,7 +24,7 @@ const page = () => {
         bottomSpaceLg="80"
         bottomSpaceMd="120"
       >
-        <Certifications />
+        <Certifications /> 
       </Section>
     </div>
   );

@@ -1,16 +1,16 @@
-"use client"
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
   FaPinterestP,
   FaTwitter,
-} from 'react-icons/fa';
-import { FaAnglesRight, FaLocationDot } from 'react-icons/fa6';
-import { HiMiniMagnifyingGlass } from 'react-icons/hi2';
+} from "react-icons/fa";
+import { FaAnglesRight, FaLocationDot } from "react-icons/fa6";
+import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
 const Header = ({ isTopBar, variant }) => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -24,73 +24,78 @@ const Header = ({ isTopBar, variant }) => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    
+
     // Set initial width
     setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const menu = {
-    email: 'demo@example.com',
-    location: '249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan',
-    logoUrl: '/assets/img/osmania-logo.png',
-    logoLink: '/',
+    email: "demo@example.com",
+    location: "249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan",
+    logoUrl: "/assets/img/osmania-logo.png",
+    logoLink: "/",
     navItems: [
       {
-        label: 'Home',
-        href: '/',
+        label: "Home",
+        href: "/",
         // subItems: [
         //   { label: 'Main Home', href: '/' },
         //   { label: 'Home V2', href: '/home-v2' },
         //   { label: 'Home V3', href: '/home-v3' },
         // ],
       },
-      { label: 'About Us', href: '/about', 
+      {
+        label: "About Us",
+        // href: '/about',
         subItems: [
-          { label: 'Vission & Mission', href: '/vission&mission' },
-          { label: 'History', href: '/history' },
-          { label: 'Introduction', href: '/introduction' },
-          { label: 'Facts & Figures', href: '/facts&figures' },
-          { label: 'Board Of Trustees', href: '/board-of-trustees' },
-          { label: 'Management', href: '/management' },
-          { label: 'Policies', href: '/policies' },
-          { label: 'Contact Us', href: '/contact-us' },
+          { label: "Vission & Mission", href: "/vission&mission" },
+          { label: "History", href: "/history" },
+          { label: "Introduction", href: "/introduction" },
+          { label: "Facts & Figures", href: "/facts&figures" },
+          { label: "Board Of Trustees", href: "/board-of-trustees" },
+          { label: "Management", href: "/management" },
+          { label: "Policies", href: "/policies" },
+          { label: "Contact Us", href: "/contact-us" },
         ],
       },
       {
-        label: 'Medical Service',
-        href: '/service',
+        label: "Medical Service",
+        // href: '/service',
         subItems: [
-          { label: 'Our Services', href: '/our-services' },
-          { label: 'Clinical Department & Faculty', href: '/department&Faculty' },
-          { label: 'List Of Consultants', href: '/list-of-consultants' },
+          { label: "Our Services", href: "/our-services" },
+          {
+            label: "Clinical Department & Faculty",
+            href: "/department&Faculty",
+          },
+          { label: "List Of Consultants", href: "/list-of-consultants" },
         ],
       },
       {
-        label: 'Help Us',
-        href: '/help-us',
+        label: "Help Us",
+        // href: '/help-us',
         subItems: [
-          { label: 'Zakat', href: '/zakat' },
-          { label: 'Donations', href: '/donations' },
-          { label: 'Sponsor An Equipment', href: '/sponsor-an-equipment' },
+          { label: "Zakat", href: "/zakat" },
+          { label: "Donations", href: "/donations" },
+          { label: "Sponsor An Equipment", href: "/sponsor-an-equipment" },
         ],
       },
-      { label: 'News & Events', href: '/news&events' },
+      { label: "News & Events", href: "/news&events" },
       // { label: 'Photo Gallery', href: '/gallery' },
       {
-        label: 'Welfare Activities',
-        href: '/welfare-activities',
+        label: "Welfare Activities",
+        href: "/welfare-activities",
         // subItems: [
         //   { label: 'Distribution Of Food Ration', href: '/zakat' },
         //   { label: 'Distribution Of Blanket & Quilts', href: '/donations' },
         //   { label: 'Tohfa-e-Eid', href: '/sponsor-equipment' },
         // ],
       },
-      { label: 'Certifications', href: '/certifications' },
+      { label: "Certifications", href: "/certifications" },
       // {
       //   label: 'Blog',
       //   href: '/blog',
@@ -113,15 +118,15 @@ const Header = ({ isTopBar, variant }) => {
       // },
       // { label: 'Contact', href: '/contact' },
     ],
-    btnUrl: '/contact',
-    btnText: 'Contact Now',
+    btnUrl: "/contact",
+    btnText: "Contact Now",
   };
 
-  const handleOpenMobileSubmenu = index => {
+  const handleOpenMobileSubmenu = (index) => {
     if (openMobileSubmenuIndex.includes(index)) {
-      setOpenMobileSubmenuIndex(prev => prev.filter(f => f !== index));
+      setOpenMobileSubmenuIndex((prev) => prev.filter((f) => f !== index));
     } else {
-      setOpenMobileSubmenuIndex(prev => [...prev, index]);
+      setOpenMobileSubmenuIndex((prev) => [...prev, index]);
     }
   };
 
@@ -129,19 +134,19 @@ const Header = ({ isTopBar, variant }) => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       if (currentScrollPos > prevScrollPos) {
-        setIsSticky('cs_gescout_sticky'); // Scrolling down
+        setIsSticky("cs_gescout_sticky"); // Scrolling down
       } else if (currentScrollPos !== 0) {
-        setIsSticky('cs_gescout_sticky cs_gescout_show'); // Scrolling up
+        setIsSticky("cs_gescout_sticky cs_gescout_show"); // Scrolling up
       } else {
         setIsSticky();
       }
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
 
@@ -149,8 +154,8 @@ const Header = ({ isTopBar, variant }) => {
     <>
       <header
         className={`cs_site_header cs_style_1 ${
-          variant ? variant : ''
-        } cs_primary_color cs_sticky_header ${isSticky ? isSticky : ''}`}
+          variant ? variant : ""
+        } cs_primary_color cs_sticky_header ${isSticky ? isSticky : ""}`}
       >
         {isTopBar && (
           <div className="cs_top_header cs_blue_bg cs_white_color">
@@ -208,7 +213,9 @@ const Header = ({ isTopBar, variant }) => {
                   <img src={menu.logoUrl} alt="Osmania Hospital Logo" />
                   <div className="cs_branding_text">
                     <h2 className="text-main">OSMANIA HOSPITAL</h2>
-                    <p className='p-red'>A PROJECT OF HYDERABAD RELIEF AND REHABILITATION TRUST</p>
+                    <p className="p-red">
+                      A PROJECT OF HYDERABAD RELIEF AND REHABILITATION TRUST
+                    </p>
                     <p className="text-main">SERVING MANKIND SINCE 1950</p>
                   </div>
                 </Link>
@@ -216,29 +223,36 @@ const Header = ({ isTopBar, variant }) => {
               <div className="cs_main_header_right ">
                 <div className="cs_nav cs_primary_color ">
                   <ul
-                    className={`cs_nav_list ${isShowMobileMenu && 'cs_active'}`}
-                    
+                    className={`cs_nav_list ${isShowMobileMenu && "cs_active"}`}
                   >
                     {menu.navItems.map((item, index) => (
                       <li
                         className={
-                          item.subItems ? 'menu-item-has-children' : ''
+                          item.subItems ? "menu-item-has-children" : ""
                         }
                         key={index}
                       >
-                        <Link
-                          href={item.href}
-                          onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
-                        >
-                          {item.label}
-                        </Link>
+                        {
+                          item?.href ?
+                          <Link
+                            href={item?.href}
+                            onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
+                          >
+                            {item.label}
+                          </Link> :
+                          <p
+                            onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
+                          >
+                            {item.label}
+                          </p>
+                        }
                         {item.subItems && (
                           <ul
                             style={{
                               display: openMobileSubmenuIndex.includes(index)
-                                ? 'block'
-                                : 'none',
-                              listStyleType: "none"
+                                ? "block"
+                                : "none",
+                              listStyleType: "none",
                             }}
                           >
                             {item.subItems.map((subItem, subIndex) => (
@@ -259,8 +273,8 @@ const Header = ({ isTopBar, variant }) => {
                           <span
                             className={`cs_menu_dropdown_toggle ${
                               openMobileSubmenuIndex.includes(index)
-                                ? 'active'
-                                : ''
+                                ? "active"
+                                : ""
                             }`}
                             onClick={() => handleOpenMobileSubmenu(index)}
                           >
@@ -273,7 +287,7 @@ const Header = ({ isTopBar, variant }) => {
                   {windowWidth < 1366 && (
                     <span
                       className={`cs_menu_toggle ${
-                        isShowMobileMenu && 'cs_toggle_active'
+                        isShowMobileMenu && "cs_toggle_active"
                       }`}
                       onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}
                     >
@@ -293,7 +307,7 @@ const Header = ({ isTopBar, variant }) => {
                   <form
                     action="#"
                     className={`cs_header_search_form ${
-                      isSearchActive ? 'active' : ''
+                      isSearchActive ? "active" : ""
                     }`}
                   >
                     <div className="cs_header_search_form_in">
@@ -320,7 +334,7 @@ const Header = ({ isTopBar, variant }) => {
             </div>
           </div>
         </div>
-        {variant == 'cs_type_1' && (
+        {variant == "cs_type_1" && (
           <div className="cs_main_header_shape">
             <svg
               width={1679}

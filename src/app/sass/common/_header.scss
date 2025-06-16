@@ -201,6 +201,15 @@
           justify-content: center;
         }
 
+        > p {
+          padding: 10px 15px;
+          display: inline-flex;
+          position: relative;
+          height: inherit;
+          align-items: center;
+          justify-content: center;
+        }
+
         > ul {
           left: 0;
           top: calc(100% + 10px);
@@ -315,6 +324,19 @@
           margin-bottom: 6px;
         }
         a {
+          padding: 0;
+          display: block;
+          text-align: center;
+          font-size: 13px;
+          line-height: 1.4em;
+          font-weight: 500;
+          &:hover {
+            img {
+              border-color: #d5d4d4;
+            }
+          }
+        }
+        p {
           padding: 0;
           display: block;
           text-align: center;
@@ -489,6 +511,12 @@
       a {
         display: block;
         padding: 10px 15px;
+        line-height: 16px;
+      }
+
+      p {
+        display: block;
+        padding: 10px 15px 0px 15px;
         line-height: 16px;
       }
       
