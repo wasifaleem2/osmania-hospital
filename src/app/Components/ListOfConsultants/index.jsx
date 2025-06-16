@@ -10,9 +10,10 @@ const Consultants = () => {
         <h1 className="main-title">Our Consultants</h1>
         
         <div className={styles.consultantsGallery}>
-          {consultants.map(consultant => (
+          {consultants.map((consultant, index) => (
             // <div key={consultant.id} className={styles.consultantCard}>
               <img 
+                key={index}
                 src={consultant} 
                 alt={`${consultant} image`} 
                 className={styles.consultantImage}
