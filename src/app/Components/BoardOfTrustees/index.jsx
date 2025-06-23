@@ -1,122 +1,65 @@
 'use client';
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPinterestP,
-  FaTwitter,
-} from "react-icons/fa";
-import Slider from "react-slick";
-import SectionHeading from "../SectionHeading";
-import Spacing from "../Spacing";
-import Link from "next/link";
-import Image from "next/image";
+import Slider from 'react-slick';
+import SectionHeading from '../SectionHeading';
+import styles from './trustees.module.scss';
+import { TRUSTEES } from '@/app/data/trustees';
 
-const BoardOfTrustees = ({ data, bgColor, variant, hr }) => {
+const BoardOfTrustees = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
+    speed: 500,
+    slidesToShow: 3,
     swipeToSlide: true,
-    appendDots: (dots) => (
-    <div className="custom-dots-container">
-      <ul>{dots}</ul>
-    </div>
-  ),
-  customPaging: () => (
-    <div className="custom-dot"></div>
-  ),
-    dotsClass: `slick-dots ${variant}`,
     responsive: [
       {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 2,
-        },
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 }
       },
       {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+        breakpoint: 768,
+        settings: { slidesToShow: 1 }
+      }
+    ]
   };
 
   return (
-    <div className="about-team">
+    <section className={styles.trusteesSection}>
       <div className="container">
         <SectionHeading
-          SectionSubtitle={data.subtitle}
-          SectionTitle={data.title}
-          variant={"text-center"}
+          SectionSubtitle="Meet Our"
+          SectionTitle="Board of Trustees"
+          variant="text-center"
         />
 
-        <div className="cs_height_50 cs_height_lg_50" />
-        <div className="cs_slider cs_style_1 cs_slider_gap_24">
-          <div className="cs_slider_container">
-            <div className="cs_slider_wrapper">
-              <Slider {...settings}>
-                {data?.sliderData.map((item, index) => (
-                  <div className="cs_slide" key={index}>
-                    <div
-                      className={`cs_team cs_style_1 ${
-                        bgColor ? "cs_accent_bg" : "cs_blue_bg"
-                      } `}
-                    >
-                      <div
-                        className={`cs_team_shape ${
-                          bgColor ? "cs_blue_bg" : "cs_accent_bg "
-                        }`}
-                      />
-                      <Link href={item.link} className="cs_team_thumbnail">
-                      <img src={item.imageUrl} alt="img"   />
-                      </Link>
-                      <div className="cs_team_bio">
-                        <h3 className="cs_team_title cs_extra_bold mb-0">
-                          <Link href={item.link}>{item.name}</Link>
-                        </h3>
-                        <p className="cs_team_subtitle">{item.profession}</p>
-                        <div className="cs_social_btns cs_style_1">
-                          <Link href={item.facebook} className="cs_center">
-                            <i>
-                              <FaFacebookF />
-                            </i>
-                          </Link>
-                          <Link href={item.pinterest} className="cs_center">
-                            <i>
-                              <FaPinterestP />
-                            </i>
-                          </Link>
-                          <Link href={item.twitter} className="cs_center">
-                            <i>
-                              <FaTwitter />
-                            </i>
-                          </Link>
-                          <Link href={item.instagram} className="cs_center">
-                            <i>
-                              <FaInstagram />
-                            </i>
-                          </Link>
+        <div className={styles.sliderContainer}>
+          <Slider {...settings} className={styles.trusteeSlider}>
+            {TRUSTEES.map((trustee) => (
+              <div key={trustee.id} className={styles.slide}>
+                <div className={styles.trusteeCard}>
+                  <div className={styles.imageContainer}>
+                    <img
+                      src={trustee.image}
+                      alt={trustee.name}
+                      className={styles.trusteeImage}
+                    />
+                    <div className={styles.imageOverlay}>
+                      <div className={styles.trusteeInfo}>
+                        <h3 className={styles.trusteeName}>{trustee.name}</h3>
+                        <p className={styles.trusteeDesignation}>{trustee.designation}</p>
+                        <div className={styles.trusteeBio}>
+                          <p>{trustee.bio}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
-      {bgColor && (
-        <div className="cs_team_bg_dark cs_blue_bg">
-          <div className="cs_team_bg_white cs_white_bg" />
-        </div>
-      )}
-      <Spacing lg={80} md={120} />
-
-      {hr && <hr />}
-    </div>
+    </section>
   );
 };
 
