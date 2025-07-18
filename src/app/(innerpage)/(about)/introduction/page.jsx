@@ -2,6 +2,7 @@ import React from "react";
 import PageHeading from "@/app/Components/PageHeading";
 import Section from "@/app/Components/Section";
 import AboutIntroduction from "@/app/Components/AboutIntroduction";
+import AboutVideo from "@/app/Components/AboutVideo";
 
 const headingData = {
   title: "Introduction",
@@ -24,6 +25,7 @@ const Page = () => {
         bottomSpaceMd="120"
       >
         <AboutIntroduction />
+        <AboutVideo />
       </Section>
     </div>
   );

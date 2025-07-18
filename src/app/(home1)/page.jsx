@@ -690,6 +690,17 @@ const page = () => {
 
       <TopVideo />
 
+      {/* Start Board of Trustees Section */}
+      <Section
+        topSpaceLg="70"
+        topSpaceMd="110"
+        bottomSpaceLg="80"
+        bottomSpaceMd="120"
+      >
+        <BoardOfTrustees data={BoardTrusteesData} hr={true}
+          variant={'cs_pagination cs_style_2'} />
+      </Section>
+
       {/* Start CTA Section */}
       {/* <Section
         className={
@@ -711,7 +722,6 @@ const page = () => {
         />
       </Section> */}
       
-      <DonationBox />
       <ReportDownloadWidget />
       {/* <Section
         className={
@@ -780,7 +790,7 @@ const page = () => {
       {/* End Projects Section */}
 
       {/* Start CTA Section */}
-      <Section
+      {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -789,7 +799,7 @@ const page = () => {
         backgroundImage="/assets/img/cta_bg_1.jpeg"
       >
         <CtaSection1 data={ctaData1} />
-      </Section>
+      </Section> */}
       {/* End CTA Section */}
 
       {/* Start Medical Tab Section */}
@@ -802,16 +812,9 @@ const page = () => {
       {/* <ContactSection2></ContactSection2> */}
       {/* End Contact Solution */}
 
-      {/* Start Blog Section */}
-      <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-      >
-        <BoardOfTrustees data={BoardTrusteesData} hr={true}
-          variant={'cs_pagination cs_style_2'} />
-      </Section>
+      {/* Donation Box Section  */}
+      <DonationBox />
+
 
       {/* <Section
         topSpaceLg="70"
