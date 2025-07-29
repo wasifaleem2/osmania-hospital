@@ -9,7 +9,7 @@ const Management = () => {
         <h1 className="main-title">Management Team</h1>
         <p className={styles.paragraph}>
           Our dedicated management team brings together diverse expertise to
-          guide our organization's mission and operations.
+          guide our organization&apos;s mission and operations.
         </p>
 
         <div className={styles.tableWrapper}>
