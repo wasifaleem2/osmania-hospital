@@ -683,26 +683,35 @@ const heroData = {
 
 const page = () => {
     return (
-        <div>
+      <div>
         {/* Start Hero Section */}
         {/* <HeroSection data={heroData} /> */}
         {/* End Hero Section */}
 
-      <TopVideo />
+        <Section
+          topSpaceLg="70"
+          topSpaceMd="110"
+          bottomSpaceLg="80"
+          bottomSpaceMd="120"
+        >
+          <TopVideo />
+        </Section>
+        {/* Start Board of Trustees Section */}
+        <Section
+          topSpaceLg="70"
+          topSpaceMd="110"
+          bottomSpaceLg="80"
+          bottomSpaceMd="120"
+        >
+          <BoardOfTrustees
+            data={BoardTrusteesData}
+            hr={true}
+            variant={"cs_pagination cs_style_2"}
+          />
+        </Section>
 
-      {/* Start Board of Trustees Section */}
-      <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-      >
-        <BoardOfTrustees data={BoardTrusteesData} hr={true}
-          variant={'cs_pagination cs_style_2'} />
-      </Section>
-
-      {/* Start CTA Section */}
-      {/* <Section
+        {/* Start CTA Section */}
+        {/* <Section
         className={
           'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
         }
@@ -710,7 +719,7 @@ const page = () => {
         <CtaSection data={ctaData} />
       </Section> */}
 
-      {/* <Section
+        {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         className={'cs_team_section position-relative'}
@@ -721,9 +730,9 @@ const page = () => {
           data={teamData}
         />
       </Section> */}
-      
-      <ReportDownloadWidget />
-      {/* <Section
+
+        <ReportDownloadWidget />
+        {/* <Section
         className={
           'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
         }
@@ -731,10 +740,10 @@ const page = () => {
         <DonationBox />
       </Section> */}
 
-      {/* End CTA Section */}
+        {/* End CTA Section */}
 
-      {/* Start About Section */}
-      {/* <Section
+        {/* Start About Section */}
+        {/* <Section
         topSpaceLg="80"
         topSpaceMd="120"
         bottomSpaceLg="80"
@@ -743,16 +752,16 @@ const page = () => {
       >
         <About data={aboutData} />
       </Section> */}
-      {/* End About Section */}
+        {/* End About Section */}
 
-      {/* Start Counter */}
-      {/* <Section className="cs_counter_area cs_gray_bg">
+        {/* Start Counter */}
+        {/* <Section className="cs_counter_area cs_gray_bg">
         <CounterSection data={countersData} />
       </Section> */}
-      {/* End Counter */}
+        {/* End Counter */}
 
-      {/* Start Service Section */}
-      {/* <Section
+        {/* Start Service Section */}
+        {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -761,17 +770,17 @@ const page = () => {
       >
         <Service cardBg={'cs_gray_bg'} data={serviceData} />
       </Section> */}
-      {/* End Service Section */}
+        {/* End Service Section */}
 
-      {/* Start Brand Section */}
-      {/* <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
+        {/* Start Brand Section */}
+        {/* <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
         <BrandsSlider data={brandData} />
       </Section> */}
 
-      {/* End Brand Section */}
+        {/* End Brand Section */}
 
-      {/* Start Why Choose Us Section */}
-      {/* <Section
+        {/* Start Why Choose Us Section */}
+        {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -781,16 +790,16 @@ const page = () => {
       >
         <ChooseUs data={sectionData} />
       </Section> */}
-      {/* End Why Choose Us Section */}
+        {/* End Why Choose Us Section */}
 
-      {/* Start Projects Section */}
-      {/* <Section topSpaceLg="70" topSpaceMd="110" className="cs_tabs">
+        {/* Start Projects Section */}
+        {/* <Section topSpaceLg="70" topSpaceMd="110" className="cs_tabs">
         <ProjectSection data={projectData} />
       </Section> */}
-      {/* End Projects Section */}
+        {/* End Projects Section */}
 
-      {/* Start CTA Section */}
-      {/* <Section
+        {/* Start CTA Section */}
+        {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -800,23 +809,22 @@ const page = () => {
       >
         <CtaSection1 data={ctaData1} />
       </Section> */}
-      {/* End CTA Section */}
+        {/* End CTA Section */}
 
-      {/* Start Medical Tab Section */}
-      {/* <Section topSpaceLg="70" topSpaceMd="110">
+        {/* Start Medical Tab Section */}
+        {/* <Section topSpaceLg="70" topSpaceMd="110">
         <MedicalTabSection data={medicalTabsData} />
       </Section> */}
-      {/* End Medical Tab Section */}
+        {/* End Medical Tab Section */}
 
-      {/* Start Contact Solution */}
-      {/* <ContactSection2></ContactSection2> */}
-      {/* End Contact Solution */}
+        {/* Start Contact Solution */}
+        {/* <ContactSection2></ContactSection2> */}
+        {/* End Contact Solution */}
 
-      {/* Donation Box Section  */}
-      <DonationBox />
+        {/* Donation Box Section  */}
+        <DonationBox />
 
-
-      {/* <Section
+        {/* <Section
         topSpaceLg="70"
         topSpaceMd="110"
         bottomSpaceLg="80"
@@ -824,9 +832,8 @@ const page = () => {
       >
         <BlogSection data={blogsData} />
       </Section> */}
-      {/* End Blog Solution */}
-
-        </div>
+        {/* End Blog Solution */}
+      </div>
     );
 };
 
