@@ -2,6 +2,7 @@ import React from "react";
 import PageHeading from "@/app/Components/PageHeading";
 import Section from "@/app/Components/Section";
 import Policies from "@/app/Components/Policies";
+import PoliciesImage from "@/app/Components/PoliciesImage";
 
 const headingData = {
   title: "Policies",
@@ -23,7 +24,7 @@ const Page = () => {
         bottomSpaceLg="80"
         bottomSpaceMd="120"
       >
-        <Policies />
+        <PoliciesImage />
       </Section>
     </div>
   );
