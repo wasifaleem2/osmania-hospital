@@ -20,9 +20,9 @@ const PageHeading = ({ data }) => {
         {urlSegments.map((segment, index) => (
           <li key={index} className="breadcrumb-item">
             {index < urlSegments.length - 1 ? (
-              <Link href={`/${urlSegments.slice(0, index + 1).join("/")}`}>
+              <>
                 {segment}
-              </Link>
+              </>
             ) : (
               <span className="active">{segment}</span>
             )}
