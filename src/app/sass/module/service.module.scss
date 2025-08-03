@@ -1,0 +1,232 @@
+// Variables
+$primary-color: #2563eb;
+$secondary-color: #1e40af;
+$accent-color: #3b82f6;
+$text-color: #1f2937;
+$light-bg: #f9fafb;
+$card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Container
+.serviceContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+}
+
+// Header
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  .subtitle {
+    color: $primary-color;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .description {
+    color: #6b7280;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+// Services Grid
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+// Service Card
+.serviceCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: $card-shadow;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $hover-shadow;
+    background: linear-gradient(to bottom, white 70%, rgba($primary-color, 0.05));
+    // background: black;
+    color: white;
+
+    .cardIcon {
+      transform: scale(1.1);
+      color: $secondary-color;
+      background: rgba($primary-color, 0.1);
+    }
+
+    .readMore {
+      opacity: 1;
+      transform: translateY(0);
+      color: $primary-color;
+    }
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($accent-color, 0.1);
+  border-radius: 50%;
+  color: $primary-color;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.cardIndex {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #9ca3af;
+}
+
+.cardContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.cardSubtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.readMore {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.7;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  margin-top: auto;
+  padding-top: 1rem;
+
+  &:hover {
+    opacity: 1;
+    color: $secondary-color;
+
+    .arrow {
+      transform: translateX(3px);
+    }
+  }
+
+  .arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+}
+
+// Footer
+.serviceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: $light-bg;
+  border-radius: 12px;
+  margin-top: 2rem;
+
+  &Icon {
+    margin-bottom: 1rem;
+  }
+
+  &Text {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+  }
+
+  &Link {
+    display: inline-flex;
+    align-items: center;
+    color: $primary-color;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $secondary-color;
+
+      span {
+        transform: translateX(5px);
+      }
+    }
+
+    span {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+  }
+}

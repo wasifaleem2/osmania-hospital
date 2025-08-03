@@ -1,0 +1,335 @@
+.donationBox {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  //   max-width: 1200px;
+  //  border-radius: 12px;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: hidden;
+  background: white;
+
+  //   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/img/banner.JPG") center/cover no-repeat;
+    opacity: 0.7;
+    z-index: 1;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.heroDivider {
+  width: 100px;
+  height: 3px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+.heroText {
+  font-size: 15px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 5px;
+    gap: 30px;
+  }
+}
+
+.logoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+//   background: #f8f9ff;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logoContainer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.logoGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    var(--primary-shadow) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+.logoTitle {
+  font-size: 17px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.logoSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.donationSection {
+  flex: 2;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.sectionText {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--light-text);
+  margin-bottom: 30px;
+}
+
+.bankDetails {
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.detailItem {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: var(--primary-color);
+//   min-width: 110px;
+  margin-right: 8px;
+  font-size: 17px;
+}
+
+.detailValue {
+  color: #333;
+  flex: 1;
+  font-size: 17px;
+}
+
+.amountInput {
+  margin-bottom: 30px;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 13px;
+  color: var(--light-text);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+}
+
+.currency {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 15px;
+  border-radius: 6px 0 0 6px;
+  font-weight: 600;
+}
+
+.amountField {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  transition: border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+}
+
+.quickDonations {
+  margin-bottom: 30px;
+}
+
+.quickDonationTitle {
+  font-size: 13px;
+  color: var(--light-text);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.amountButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amountButton {
+  padding: 12px 20px;
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+.donateButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 15px 25px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px var(--primary-shadow);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--primary-shadow);
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  }
+}
+
+.buttonIcon {
+  margin-left: 10px;
+  font-size: 15px;
+  transition: transform 0.3s;
+}
+
+.donateButton:hover .buttonIcon {
+  transform: translateX(3px);
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 22px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .amountButtons {
+    justify-content: center;
+  }
+
+  .amountButton {
+    flex: 1 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .donateButton {
+    max-width: 100%;
+  }
+}

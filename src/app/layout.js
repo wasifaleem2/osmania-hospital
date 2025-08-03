@@ -18,13 +18,13 @@ const poppins = Poppins({
 export const metadata = {
   title: {
     absolute: '',
-    default: 'Medilo- Medical & Health NextJS Template',
-    template: '%s | Medilo- Medical & Health NextJS Template',
+    default: 'Osmania Hospital',
+    template: 'Osmania Hospital',
   },
-  description: 'Medilo- Medical & Health NextJS Template',
+  description: 'Osmania Hospital Website',
   openGraph: {
-    title: 'Medilo- Medical & Health NextJS Template',
-    description: 'Medilo- Medical & Health NextJS Template',
+    title: 'Osmania Hospital',
+    description: 'Osmania Hospital',
     image: '/openGraphImage.jpg',
   },
 };
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="author" content="Themeservices" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/osmania-logo.png" sizes="any" />
       </head>
       <body className={`${rubik.variable} ${poppins.variable}`}>
         {children}
