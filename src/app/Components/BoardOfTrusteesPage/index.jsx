@@ -3,7 +3,6 @@ import styles from "./trustees.module.scss";
 import { TRUSTEES } from "@/app/data/trustees";
 
 const Trustees = () => {
- 
   return (
     <div className={styles.trusteesContainer}>
       <div className={styles.trusteesContent}>
@@ -19,7 +18,14 @@ const Trustees = () => {
           {TRUSTEES.map(({ id, name, designation, bio, image }) => (
             <div key={id} className={styles.card}>
               <div className={styles.imageWrapper}>
-                <img src={image} alt={name} className={styles.image} />
+                <img 
+                  src={image} 
+                  alt={name} 
+                  className={styles.image}
+                  width={1712}
+                  height={1712}
+                  loading="lazy"
+                />
               </div>
               <div className={styles.info}>
                 <h3 className={styles.name}>{name}</h3>
