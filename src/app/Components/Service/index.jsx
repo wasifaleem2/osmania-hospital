@@ -118,12 +118,12 @@ const Service = ({ data }) => {
               </h3>
               <p className={styles.cardSubtitle}>{service.subtitle}</p>
 
-              <Link href={service.link} className={styles.readMore}>
+              {/* <Link href={service.link} className={styles.readMore}>
                 Read More
                 <span className={styles.arrow}>
                   <FaAngleDoubleRight />
                 </span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         ))}
