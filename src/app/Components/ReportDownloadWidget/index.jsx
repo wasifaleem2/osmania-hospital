@@ -1,13 +1,22 @@
 "use client"
-import React, { useState } from "react";
+import { useAppDispatch } from "@/redux/hooks";
+import { FetchReports, reportsData } from "@/redux/slices/reportsSlice";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const ReportDownloadWidget = () => {
+  let dispatch = useDispatch();
+  const {reports} = useSelector(reportsData)
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [reports] = useState([
-    { id: 1, name: "Monthly_Report_Jan_2023.pdf", date: "15 Jan 2023" },
-    { id: 2, name: "Patient_Statistics_Q1.pdf", date: "30 Mar 2023" },
-    { id: 3, name: "Annual_Report_2022.pdf", date: "15 Jan 2023" },
-  ]);
+  // const [reports] = useState([]);
+
+  const SearchReports = async () => {
+    await dispatch(FetchReports({}))
+  }
+
+  // useEffect(()=>{
+
+  // }, [])
 
   const handleDownload = (format, fileName = "") => {
     if (fileName) {
@@ -25,17 +34,26 @@ const ReportDownloadWidget = () => {
       <div className="report-widget__form">
         <div className="report-widget-header">
           <div className="hospital-logo-box">
-            <img src="assets/img/osmania-logo.png" alt="Hospital Logo" className="hospital-logo" />
+            <img
+              src="assets/img/osmania-logo.png"
+              alt="Hospital Logo"
+              className="hospital-logo"
+            />
             <h2>OSMANIA HOSPITAL</h2>
           </div>
           <h3>LABORATORY REPORT DOWNLOAD</h3>
         </div>
-        
+
         <div className="input-section">
           <input
             type="text"
             placeholder="Type your phone number"
             value={phoneNumber}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                SearchReports();
+              }
+            }}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
           {/* <div className="report-widget__buttons">
@@ -67,7 +85,7 @@ const ReportDownloadWidget = () => {
                     </div>
                   </td>
                   <td>
-                    <button 
+                    <button
                       className="download-btn"
                       onClick={() => handleDownload("PDF", report.name)}
                     >

@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './sass/style.scss';
+import ClientProvider from "./ClientProvider";
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -37,7 +38,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/osmania-logo.png" sizes="any" />
       </head>
       <body className={`${rubik.variable} ${poppins.variable}`}>
-        {children}
+        <ClientProvider>
+          {children}
+        </ClientProvider>
       </body>
     </html>
   );
