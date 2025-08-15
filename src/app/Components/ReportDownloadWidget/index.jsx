@@ -3,10 +3,11 @@ import { useAppDispatch } from "@/redux/hooks";
 import { FetchReports, reportsData } from "@/redux/slices/reportsSlice";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Loader from "../Loader";
 
 const ReportDownloadWidget = () => {
   let dispatch = useDispatch();
-  const {reports} = useSelector(reportsData)
+  const {reports, loading} = useSelector(reportsData)
   const [phoneNumber, setPhoneNumber] = useState("");
   // const [reports] = useState([]);
 
@@ -65,37 +66,41 @@ const ReportDownloadWidget = () => {
 
         <div className="reports-table">
           <h4>Available Reports</h4>
-          <table>
-            <thead>
-              <tr>
-                <th>Report Name</th>
-                <th>Download</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reports.map((report) => (
-                <tr key={report.id}>
-                  <td>
-                    <div className="file-info">
-                      <span className="file-icon">📄</span>
-                      <div>
-                        <div className="file-name">{report.name}</div>
-                        <div className="file-date">{report.date}</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <button
-                      className="download-btn"
-                      onClick={() => handleDownload("PDF", report.name)}
-                    >
-                      Download
-                    </button>
-                  </td>
+          {
+            loading ? 
+            <Loader /> :
+            <table>
+              <thead>
+                <tr>
+                  <th>Report Name</th>
+                  <th>Download</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                    {reports.map((report) => (
+                      <tr key={report.id}>
+                        <td>
+                          <div className="file-info">
+                            <span className="file-icon">📄</span>
+                            <div>
+                              <div className="file-name">{report.name}</div>
+                              <div className="file-date">{report.date}</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <button
+                            className="download-btn"
+                            onClick={() => handleDownload("PDF", report.name)}
+                          >
+                            Download
+                          </button>
+                        </td>
+                      </tr>
+                    ))}                  
+              </tbody>
+            </table>
+          }
         </div>
       </div>
     </div>

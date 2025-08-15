@@ -16,3 +16,20 @@ export const reportsAPI = (data) => {
 
     }
 }
+
+export const allDataAPI = (data) => {
+    try {
+        console.log("inside api function..")
+        // let response = axiosInstance.post(
+        //     "",
+        //     data
+        // )
+        // return response;
+        return [
+            "abc", "def"
+        ]
+    }
+    catch (error) {
+
+    }
+}

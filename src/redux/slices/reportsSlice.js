@@ -12,7 +12,7 @@ export const FetchReports = createAsyncThunk("Reports/Fetch", async data => {
 
 const initialState = {
   reports: [],
-  loading: false,
+  loading: true,
   error: "",
 }
 
