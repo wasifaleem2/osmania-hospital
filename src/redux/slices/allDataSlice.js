@@ -1,10 +1,13 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { allDataAPI } from "@/utils/apis";
 
-export const FetchData = createAsyncThunk("Data/Fetch", async (data) => {
+export const FetchData = createAsyncThunk("Data/Fetch", async (datafor) => {
   try {
-    let response = await allDataAPI(data);
-    return response;
+    let response = await allDataAPI(datafor);
+    return {
+      data : response?.data,
+      status: response?.status
+    }
   } catch (error) {}
 });
 
@@ -24,6 +27,7 @@ const AllDataSlice = createSlice({
         state.loading = true;
       })
       .addCase(FetchData.fulfilled, (state, action) => {
+        console.log("data payload", action?.payload?.data)
         state.loading = false;
         state.data = [];
         state.error = "";

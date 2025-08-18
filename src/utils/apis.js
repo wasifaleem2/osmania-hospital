@@ -20,17 +20,18 @@ export const reportsAPI = async ({data, nic}) => {
     }
 }
 
-export const allDataAPI = (data) => {
+export const allDataAPI = (datafor) => {
     try {
-        console.log("inside api function..")
-        // let response = axiosInstance.post(
-        //     "",
-        //     data
-        // )
-        // return response;
-        return [
-            "abc", "def"
-        ]
+        console.log("inside data api function..", datafor)
+        let response = axiosInstance.get(
+            "blogs",
+            {
+                params: {
+                    ...datafor
+                }
+            }
+        )
+        return response;
     }
     catch (error) {
 

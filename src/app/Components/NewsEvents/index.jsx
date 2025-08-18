@@ -1,7 +1,11 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import styles from "./newsevents.module.scss";
+import { useDispatch } from "react-redux";
+import { FetchData } from "@/redux/slices/allDataSlice";
 
 const NewsEvents = () => {
+  const dispatch = useDispatch()
   const ceremony = ["/assets/img/events/Event Ceremony 1.jpeg", "/assets/img/events/Event Ceremony 2.jpeg", "/assets/img/events/Event Ceremony 3.jpg", "/assets/img/events/Event Ceremony 4.jpg", "/assets/img/events/Event Ceremony 5.jpg"]
   const events = [
     {
@@ -73,6 +77,15 @@ const NewsEvents = () => {
       image: "/assets/img/suegery_overlay.jpg",
     },
   ];
+
+  useEffect(() => {
+    let datafor = {
+      categorykey: "news_and_events",
+      isPublished: true,
+      populate: true,
+    };
+    dispatch(FetchData(datafor));
+  }, []);
 
   return (
     <div className={styles.newsEventsContainer}>
