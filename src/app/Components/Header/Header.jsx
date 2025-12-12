@@ -35,8 +35,9 @@ const Header = ({ isTopBar, variant }) => {
   }, []);
 
   const menu = {
-    email: "demo@example.com",
-    location: "249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan",
+    email: "",
+    // location: "249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan",
+    location: "249, Opposite Central Jail, Karachi, Pakistan",
     logoUrl: "/assets/img/osmania-logo.png",
     logoLink: "/",
     navItems: [

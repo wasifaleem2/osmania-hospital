@@ -32,7 +32,13 @@ const DonationZakat = ({ title, description, bankDetails, contactInfo, important
 
           <div className={styles.importantNote}>
             <h3 className={styles.sectionTitle}>Important Note</h3>
-            <p className={styles.paragraph}>{importantNote}</p>
+            {/* <p className={styles.paragraph}>{importantNote}</p> */}
+            {importantNote.split("\n").map((line, index) => (
+              <p className={styles.paragraph} key={index}>
+                {line}
+                <br />
+              </p>
+            ))}
           </div>
         </div>
       </div>

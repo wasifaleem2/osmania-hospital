@@ -14,7 +14,8 @@ const Footer = () => {
   const data = {
     logo: '/assets/img/osmania-logo.png',
     contactText: 'Open Hours: Mon-Fri: 8.00 am - 6.00 pm',
-    address: '249 OOP, Hyderabad Colony, OOP. Central Jail',
+    address: '249 Opposite Central Jail',
+    // address: '249 OOP, Hyderabad Colony, OOP. Central Jail',
     city: 'Karachi, Pakistan',
     phone: '+92 (21) 34123450',
     phone2: '+92 (21) 34121053',

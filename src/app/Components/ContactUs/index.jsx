@@ -24,7 +24,8 @@ const ContactUs = () => {
                 <h3 className={styles.sectionHeading}>Address</h3>
                 <p className={styles.contactText}>
                   <i className={`${styles.icon} fas fa-map-marker-alt`}></i>
-                  249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan
+                  {/* 249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan */}
+                  249, Opposite Central Jail, Karachi, Pakistan
                 </p>
               </div>
 

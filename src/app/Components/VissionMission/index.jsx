@@ -8,9 +8,9 @@ const VissionMission = () => {
         <div className={styles.visionSection}>
           <h2 className={styles.sectionTitle}>OUR VISION</h2>
           <p className={styles.sectionText}>
-            The Hyderabad Trust Osmania Hospital shall be recognized as one of
-            the quality health care institution in Pakistan, meeting catering to
-            the less Privileged class of the Country.
+            The Osmania Hospital shall be recognized as quality healthcare
+            institution in Pakistan, catering to the less Privileged class of
+            society.
           </p>
         </div>
 
@@ -18,17 +18,18 @@ const VissionMission = () => {
           <h2 className={styles.sectionTitle}>OUR MISSION</h2>
           <ul className={styles.missionList}>
             <li className={styles.missionItem}>
-              To provide medical facilities at affordable cost or even free /
-              partially free to deserving persons of society without any
-              distinction of religion and caste, through Zakat or Donation.
+              To provide medical facilities at affordable cost or free /
+              partially free to deserving patients of society without any
+              distinction of religion and caste through Zakat or donation.
             </li>
             <li className={styles.missionItem}>
               To provide a work environment that fosters motivation and
               commitment in our staff.
             </li>
             <li className={styles.missionItem}>
-              To develop new services in response to public expectation as
-              resources permit on economically viable and sustainable basis.
+              To expand healthcare facilities by developing new services in
+              response to public needs and expectation while ensuring an
+              economically viable and sustainable financial status.
             </li>
           </ul>
         </div>

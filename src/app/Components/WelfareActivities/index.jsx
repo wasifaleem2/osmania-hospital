@@ -7,7 +7,7 @@ const WelfareActivities = () => {
       id: 1,
       title: "Distribution of Food Ration",
       description: [
-        "This program was started in March 2020, when nation faced lockdowns due to COVID 19 pandemic. It badly affected the income of lower and middle class of society especially the daily wage earners were in miserable condition. The HRRT saw this as an opportunity to help the poor and needy, a project was initiated and arrangements were made to distribute food ration among the affected families. The funding for the project was provided by the Hyderabad Foundation USA. The food ration distribution project ably rescued hundreds of families from famine conditions. The project is now a permanent project of Hyderabad Relief and Rehabilitation Trust and the Hyderabad Foundation USA continues to play a major role in providing funding for the project.",
+        "This program was started in March 2020, when nation faced lockdowns due to COVID 19 pandemic. It badly affected the income of lower and middle class of society especially the daily wage earners were in miserable condition. The HRRT saw this as an opportunity to help the poor and needy, a project was initiated and arrangements were made to distribute food ration among the affected families. The funding for the project was provided by the Hyderabad Foundation USA. The food ration distribution project ably rescued hundreds of families from famine conditions.",
       ],
       image: "/assets/img/welfares/Distribution of Food Ration.jpg",
       stats: "Helped 5,000+ families during COVID-19 crisis",

@@ -99,6 +99,11 @@ const History = () => {
               the massive contributions of this great man, even though he has
               not been recognized universally as he should have been.
             </p>
+            <p>
+              We would like to enumerate briefly a short history of the
+              magnanimous 7 nizams of Hyderabad and the State of Hyderabad as a
+              monument to their memory.
+            </p>
           </div>
         </div>
 
@@ -110,11 +115,6 @@ const History = () => {
               Mughal Emperor Aurangzeb. The rulers of Hyderabad were given the
               title of Nizam. There were 7 Nizams who ruled Hyderabad, from 1724
               to 1948, when the state of Hyderabad was occupied by India.
-            </p>
-            <p>
-              We would like to enumerate briefly a short history of the
-              magnanimous 7 nizams of Hyderabad and the State of Hyderabad as a
-              monument to their memory.
             </p>
           </div>
 

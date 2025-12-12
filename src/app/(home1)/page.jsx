@@ -17,6 +17,7 @@ import DonationBox from '../Components/DonationBoxHome';
 import BoardOfTrustees from '../Components/BoardOfTrustees';
 import TopVideo from '../Components/TopVideo';
 import ReportDownloadWidget from '../Components/ReportDownloadWidget';
+import CertificationsWidget from '../Components/CertificationsWidget';
 
 const heroData = {
     primarySlider: [
@@ -689,19 +690,22 @@ const page = () => {
         {/* End Hero Section */}
 
         <Section
-          topSpaceLg="70"
-          topSpaceMd="110"
-          bottomSpaceLg="80"
-          bottomSpaceMd="120"
+          topSpaceLg="0"
+          topSpaceMd="0"
+          bottomSpaceLg="0"
+          bottomSpaceMd="0"
         >
           <TopVideo />
         </Section>
+
+        <ReportDownloadWidget />
+        
         {/* Start Board of Trustees Section */}
         <Section
-          topSpaceLg="70"
-          topSpaceMd="110"
-          bottomSpaceLg="80"
-          bottomSpaceMd="120"
+          topSpaceLg="0"
+          topSpaceMd="0"
+          bottomSpaceLg="0"
+          bottomSpaceMd="0"
         >
           <BoardOfTrustees
             data={BoardTrusteesData}
@@ -731,7 +735,7 @@ const page = () => {
         />
       </Section> */}
 
-        <ReportDownloadWidget />
+        
         {/* <Section
         className={
           'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
@@ -823,6 +827,7 @@ const page = () => {
 
         {/* Donation Box Section  */}
         <DonationBox />
+        <CertificationsWidget />
 
         {/* <Section
         topSpaceLg="70"
