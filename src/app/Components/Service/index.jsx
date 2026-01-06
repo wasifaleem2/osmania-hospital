@@ -116,7 +116,8 @@ const Service = ({ data }) => {
 
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>
-                <Link href={service.link}>{service.title}</Link>
+                {/* <Link href={service.link}>{service.title}</Link> */}
+                <p>{service.title}</p>
               </h3>
               <p className={styles.cardSubtitle}>{service.subtitle}</p>
 
