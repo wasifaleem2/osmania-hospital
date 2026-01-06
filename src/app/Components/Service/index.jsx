@@ -25,6 +25,7 @@ import {
   FaBone,
   FaFlask,
   FaNutritionix,
+  FaFemale,
 } from "react-icons/fa";
 import { FaScissors, FaUserDoctor } from "react-icons/fa6";
 import Link from "next/link";
@@ -76,6 +77,7 @@ const Service = ({ data }) => {
       FaRunning: FaRunning,
 
       FaUserDoctor: FaUserDoctor,
+      FaFemale: FaFemale,
       FaNutritionix: FaNutritionix,
       FaBrain: FaBrain,
       FaLungs: FaLungs,

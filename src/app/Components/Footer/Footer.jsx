@@ -13,12 +13,13 @@ import {
 const Footer = () => {
   const data = {
     logo: '/assets/img/osmania-logo.png',
-    contactText: 'Open Hours: Mon-Fri: 8.00 am - 6.00 pm',
-    address: '249 Opposite Central Jail',
+    contactText: 'Open Hours: Always Open',
+    address: '249 Hyderabad colony opposite central jail, Karachi, Pakistan',
     // address: '249 OOP, Hyderabad Colony, OOP. Central Jail',
     city: 'Karachi, Pakistan',
     phone: '+92 (21) 34123450',
     phone2: '+92 (21) 34121053',
+    phone3: '+92 (21) 34120292',
     facebookHref: 'https://www.facebook.com/osmania.hospital/',
     widgets: [
       {
@@ -64,7 +65,7 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <FaPhoneAlt className="icon" />
-              <span>{data.phone} / {data.phone2}</span>
+              <span>{data.phone} / {data.phone2} / {data.phone3}</span>
             </div>
           </div>
         </div>

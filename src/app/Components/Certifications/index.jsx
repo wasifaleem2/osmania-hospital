@@ -8,7 +8,7 @@ const Certifications = () => {
   return (
     <div className={styles.certificationsContainer}>
       <div className={styles.certificationsContent}>
-        <h1 className={styles.title}>Our Certifications</h1>
+        <h1 className={styles.title}>Certifications</h1>
         
         <div className={styles.certificationsGrid}>
           {certifications.map(cert => (

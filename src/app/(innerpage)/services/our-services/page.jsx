@@ -9,7 +9,7 @@ const headingData = {
 
 const serviceData = {
   subtitle: "OUR BEST SERVICE",
-  title: "High-Quality Medical Services",
+  title: "Medical Services",
   description:
     "We provide comprehensive healthcare solutions with state-of-the-art technology and compassionate care for all your medical needs.",
   services: [

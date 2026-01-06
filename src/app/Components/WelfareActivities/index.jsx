@@ -35,7 +35,7 @@ const WelfareActivities = () => {
   return (
     <div className={styles.welfareContainer}>
       <div className={styles.welfareContent}>
-        <h1 className={styles.title}>Our Welfare Activities</h1>
+        <h1 className={styles.title}>Welfare Activities</h1>
         <p className={styles.intro}>
           Through these humanitarian initiatives, we strive to alleviate
           suffering and bring hope to vulnerable communities

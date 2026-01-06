@@ -8,7 +8,7 @@ const headingData = {
 
 const departmentsData = {
   subtitle: "DEPARTMENTS & FACULTY",
-  title: "High-Quality Medical Departments",
+  title: "Medical Departments",
   description:
     "Our hospital provides specialized medical care across various departments, ensuring patients receive expert treatment from experienced professionals.",
   services: [
@@ -77,10 +77,10 @@ const departmentsData = {
     },
     {
       index: "10",
-      title: "Nutrition",
-      subtitle: "Personalized diet plans and nutritional counseling",
-      icon: "FaNutritionix",
-      link: "/departments/nutrition",
+      title: "Gynecology",
+      subtitle: "Comprehensive care for women's",
+      icon: "FaFemale",
+      link: "/departments/gynecology-obstetrics",
     },
     {
       index: "11",
