@@ -1,13 +1,14 @@
 "use client"
-import { FetchData } from "@/redux/slices/allDataSlice";
+import { allData, FetchData } from "@/redux/slices/allDataSlice";
 import styles from "./policies.module.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 const PoliciesImage = () => {
   const dispatch = useDispatch()
   const imageNumbers = Array.from({ length: 28 }, (_, i) => i + 1);
-
+  const { data, loading, error } = useSelector(allData);
+  
   useEffect(() => {
     let datafor = {
       categorykey: "policy",
@@ -16,6 +17,10 @@ const PoliciesImage = () => {
     };
     dispatch(FetchData(datafor));
   }, []);
+
+  useEffect(()=>{
+    console.log("policy data", data)
+  }, [data])
 
   return (
     <div className={styles.policiesContainer}>

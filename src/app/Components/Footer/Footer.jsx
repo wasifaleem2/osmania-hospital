@@ -13,8 +13,8 @@ import {
 const Footer = () => {
   const data = {
     logo: '/assets/img/osmania-logo.png',
-    contactText: 'Open Hours: Always Open',
-    address: '249 Hyderabad colony opposite central jail, Karachi, Pakistan',
+    contactText: 'Open Hours: 24 Hours',
+    address: '249 Hyderabad colony opposite central jail',
     // address: '249 OOP, Hyderabad Colony, OOP. Central Jail',
     city: 'Karachi, Pakistan',
     phone: '+92 (21) 34123450',
