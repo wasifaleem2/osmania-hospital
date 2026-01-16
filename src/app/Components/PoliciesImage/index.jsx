@@ -26,12 +26,24 @@ const PoliciesImage = () => {
     <div className={styles.policiesContainer}>
       <div className={styles.policiesContent}>
         <h1 className="main-title">Policies Images</h1>
-        <div className={styles.imagesGrid}>
+        {/* <div className={styles.imagesGrid}>
           {imageNumbers.map((number) => (
             <div key={number} className={styles.imageContainer}>
               <img
                 src={`/assets/img/policies/${number}.jpg`}
                 alt={`Policy image ${number}`}
+                className={styles.policyImage}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div> */}
+        <div className={styles.imagesGrid}>
+          {data.map((item) => (
+            <div key={item?.id} className={styles.imageContainer}>
+              <img
+                src={item?.imageUrl}
+                alt={`Policy image ${item?.id}`}
                 className={styles.policyImage}
                 loading="lazy"
               />

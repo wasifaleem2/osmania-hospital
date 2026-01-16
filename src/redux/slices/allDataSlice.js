@@ -27,9 +27,9 @@ const AllDataSlice = createSlice({
         state.loading = true;
       })
       .addCase(FetchData.fulfilled, (state, action) => {
-        console.log("data payload", action?.payload?.data)
+        console.log("data payload", action?.payload?.data?.blogs)
         state.loading = false;
-        state.data = [];
+        state.data = action?.payload?.data?.blogs;
         state.error = "";
       })
       .addCase(FetchData.rejected, (state, action) => {
