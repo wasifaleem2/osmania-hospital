@@ -3,6 +3,7 @@ import { allData, FetchData } from "@/redux/slices/allDataSlice";
 import styles from "./policies.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import Loader from "../Loader";
 
 const PoliciesImage = () => {
   const dispatch = useDispatch()
@@ -38,18 +39,22 @@ const PoliciesImage = () => {
             </div>
           ))}
         </div> */}
-        <div className={styles.imagesGrid}>
-          {data.map((item) => (
-            <div key={item?.id} className={styles.imageContainer}>
-              <img
-                src={item?.imageUrl}
-                alt={`Policy image ${item?.id}`}
-                className={styles.policyImage}
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
+        {
+          loading ? 
+          <Loader /> :
+          <div className={styles.imagesGrid}>
+            {data.map((item) => (
+              <div key={item?.id} className={styles.imageContainer}>
+                <img
+                  src={item?.imageUrl}
+                  alt={`Policy image ${item?.id}`}
+                  className={styles.policyImage}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        }
       </div>
     </div>
   );

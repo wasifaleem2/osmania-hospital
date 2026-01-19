@@ -9,7 +9,7 @@
   background-color: var(--card-bg);
   padding: 3rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px var(--border-color);
 }
 
 .iframeWrapper {
@@ -19,7 +19,7 @@
   height: 0;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--border-color);
 }
 
 .iframeWrapper iframe {
@@ -44,14 +44,14 @@
 .imageContainer {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex; // Added to help with image alignment
   flex-direction: column; // Added to help with image alignment
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px var(--border-color);
   }
 }
 

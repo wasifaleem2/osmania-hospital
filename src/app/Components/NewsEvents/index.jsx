@@ -83,8 +83,8 @@ const NewsEvents = () => {
         
         {/* Show message if no data */}
         {uniqueGroups.length === 0 && !loading ? (
-          <div className={styles.noData}>
-            <p>No news and events available at the moment.</p>
+          <div>
+            {/* <p>No news and events available at the moment.</p> */}
           </div>
         ) : (
           // Display grouped API data
