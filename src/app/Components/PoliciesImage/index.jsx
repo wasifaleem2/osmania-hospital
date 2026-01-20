@@ -13,15 +13,15 @@ const PoliciesImage = () => {
   useEffect(() => {
     let datafor = {
       categorykey: "policy",
+      order: "asc",
       isPublished: true,
-      populate: true,
     };
     dispatch(FetchData(datafor));
   }, []);
 
-  useEffect(()=>{
-    console.log("policy data", data)
-  }, [data])
+  // useEffect(()=>{
+  //   console.log("policy data", data)
+  // }, [data])
 
   return (
     <div className={styles.policiesContainer}>

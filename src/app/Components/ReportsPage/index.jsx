@@ -23,7 +23,8 @@ import {
   FaFilePdf,
   FaSort,
   FaSortUp,
-  FaSortDown
+  FaSortDown,
+  FaNotesMedical,
 } from "react-icons/fa";
 
 const ReportsPage = () => {
@@ -33,15 +34,15 @@ const ReportsPage = () => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'ascending' });
 
   const SearchReports = async () => {
-    if (clientNumber.length > 13) {
-      dispatch(settingReportError("Incorrect registration number"));
+    if (!clientNumber) {
+      dispatch(settingReportError("Please enter your invoice number."));
       return;
     }
 
-    if (clientNumber.length > 13) {
-      dispatch(settingReportError("Registration number must be 13 digits"));
-      return;
-    }
+    // if (clientNumber.length > 20) {
+    //   dispatch(settingReportError("Invoice number must be less tha 20 digits"));
+    //   return;
+    // }
 
     let data = {
       includeRecords: true,
@@ -61,28 +62,23 @@ const ReportsPage = () => {
       return;
     }
 
-    // Create a temporary anchor element for download
     const link = document.createElement('a');
     link.href = fileUrl;
     
-    // Extract filename from URL or use provided filename
     let downloadName = fileName;
     if (!downloadName && fileUrl) {
       const urlParts = fileUrl.split('/');
       downloadName = urlParts[urlParts.length - 1] || 'report.pdf';
     }
     
-    // Add download attribute
     link.download = downloadName;
     link.target = '_blank';
     
-    // Trigger download
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  // Sort functionality
   const handleSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
@@ -96,14 +92,12 @@ const ReportsPage = () => {
     return sortConfig.direction === 'ascending' ? <FaSortUp /> : <FaSortDown />;
   };
 
-  // Sort reports if needed
   const sortedReports = reports?.records ? [...reports.records] : [];
   if (sortConfig.key) {
     sortedReports.sort((a, b) => {
       let aValue = a[sortConfig.key];
       let bValue = b[sortConfig.key];
       
-      // Handle date sorting
       if (sortConfig.key === 'createdAt' || sortConfig.key === 'updatedAt') {
         aValue = new Date(aValue || a.createdAt);
         bValue = new Date(bValue || b.createdAt);
@@ -140,7 +134,7 @@ const ReportsPage = () => {
           <div className="input-group">
             <input
               type="text"
-              placeholder="Enter your registration number"
+              placeholder="Enter your invoice number"
               value={clientNumber}
               onChange={(e) => setClientNumber(e.target.value)}
               onKeyDown={handleKeyPress}
@@ -161,7 +155,7 @@ const ReportsPage = () => {
               )}
             </button>
           </div>
-          <p className="input-hint">Enter your registration number</p>
+          <p className="input-hint">Enter your invoice number</p>
         </div>
 
         {error && (
@@ -183,17 +177,17 @@ const ReportsPage = () => {
               <FaUser /> Patient Information
             </h3>
             <div className="info-grid">
-              <div className="info-item">
+              {/* <div className="info-item">
                 <span className="info-label">
                   <FaUser /> Name:
                 </span>
                 <span className="info-value">
                   {reports.name || "Not provided"}
                 </span>
-              </div>
+              </div> */}
               <div className="info-item">
                 <span className="info-label">
-                  <FaIdCard /> Registration:
+                  <FaIdCard /> Invoice Number:
                 </span>
                 <span className="info-value">
                   {reports.nic || clientNumber || "Not provided"}
@@ -228,7 +222,7 @@ const ReportsPage = () => {
 
             {reports.records.length === 0 ? (
               <div className="no-reports">
-                <p>No reports found for this registration number.</p>
+                <p>No reports found for this invoice number.</p>
               </div>
             ) : (
               <div className="reports-table-container">
@@ -247,7 +241,7 @@ const ReportsPage = () => {
                             </span>
                           </div>
                         </th>
-                        <th 
+                        {/* <th 
                           className="description-column"
                           onClick={() => handleSort('description')}
                         >
@@ -257,7 +251,7 @@ const ReportsPage = () => {
                               {getSortIcon('description')}
                             </span>
                           </div>
-                        </th>
+                        </th> */}
                         <th 
                           className="date-column"
                           onClick={() => handleSort('updatedAt')}
@@ -278,7 +272,7 @@ const ReportsPage = () => {
                           <td className="file-cell">
                             <div className="file-info">
                               <div className="file-icon">
-                                <FaFilePdf />
+                                <FaNotesMedical />
                               </div>
                               <div className="file-details">
                                 <div className="file-title">{report.title}</div>
@@ -289,11 +283,11 @@ const ReportsPage = () => {
                               </div>
                             </div>
                           </td>
-                          <td className="description-cell">
+                          {/* <td className="description-cell">
                             <div className="description-content">
                               {report?.description || "Laboratory test report"}
                             </div>
-                          </td>
+                          </td> */}
                           <td className="date-cell">
                             <div className="date-content">
                               <FaCalendarAlt className="calendar-icon" />
@@ -336,7 +330,7 @@ const ReportsPage = () => {
         !loading &&
         clientNumber && (
           <div className="no-data-message">
-            <p>No reports found for the provided registration number.</p>
+            <p>No reports found for the provided Invoice number.</p>
           </div>
         )
       )}
