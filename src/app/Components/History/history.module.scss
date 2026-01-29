@@ -3,7 +3,7 @@
   //   background-color: #f9f9f9;
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  color: #444;
+  color: var(--light-text);
 
   .historyContent {
     max-width: 1200px;
@@ -11,7 +11,7 @@
     background-color: var(--card-bg) !important;
     padding: 3rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow);
 
     .historyTitle {
       color: var(--primary-color);
@@ -76,7 +76,7 @@
           width: 150px;
           height: auto;
           border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px var(--box-shadow);
         }
 
         .founderCaption {
@@ -173,7 +173,7 @@
     margin-bottom: 1.5rem;
     background: #ecf0f4;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px var(--box-shadow);
     display: flex;
     gap: 1.5rem;
     align-items: center;

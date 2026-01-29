@@ -35,8 +35,9 @@ const Header = ({ isTopBar, variant }) => {
   }, []);
 
   const menu = {
-    email: "demo@example.com",
-    location: "249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan",
+    email: "",
+    // location: "249 Hyderabad Colony, Opp. Central Jail, Karachi, Pakistan",
+    location: "249, Opposite Central Jail, Karachi, Pakistan",
     logoUrl: "/assets/img/osmania-logo.png",
     logoLink: "/",
     navItems: [
@@ -53,11 +54,11 @@ const Header = ({ isTopBar, variant }) => {
         label: "About Us",
         // href: '/about',
         subItems: [
-          { label: "Vission & Mission", href: "/vission&mission" },
+          { label: "Vission & Mission", href: "/our-vision-mission" },
           { label: "History", href: "/history" },
           { label: "Introduction", href: "/introduction" },
-          { label: "Facts & Figures", href: "/facts&figures" },
-          { label: "Board Of Trustees", href: "/board-of-trustees" },
+          { label: "Facts & Figures", href: "/facts-figures" },
+          { label: "Board Of Trustees", href: "/trustees" },
           { label: "Management", href: "/management" },
           { label: "Policies", href: "/policies" },
           { label: "Contact Us", href: "/contact-us" },
@@ -70,7 +71,7 @@ const Header = ({ isTopBar, variant }) => {
           { label: "Our Services", href: "/our-services" },
           {
             label: "Clinical Department & Faculty",
-            href: "/department&Faculty",
+            href: "/clinical-departments-faculty",
           },
           { label: "List Of Consultants", href: "/list-of-consultants" },
         ],

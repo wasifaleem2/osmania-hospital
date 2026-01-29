@@ -1,3 +1,5 @@
+// newsevents.module.scss
+
 .newsEventsContainer {
   padding: 4rem 2rem;
   font-family: "Arial", sans-serif;
@@ -7,67 +9,85 @@
 .newsEventsContent {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: var(--card-bg);
-  padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.title {
-  color: var(--primary-color);
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  position: relative;
-  padding-bottom: 1rem;
+.main-title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
   text-align: center;
-
+  position: relative;
+  padding-bottom: 1.5rem;
+  
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
+    width: 150px;
     height: 4px;
-    background-color: var(--secondary-color);
+    background-color: #3498db;
+    border-radius: 2px;
   }
 }
 
+// Loading state
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+}
+
+// Error state
+.error {
+  color: #e74c3c;
+  background-color: #fddede;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem 0;
+  border-left: 5px solid #e74c3c;
+}
+
+// No data state
+.noData {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+// Event sections
 .eventSection {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .sectionTitle {
-  color: var(--primary-color);
+  color: #2c3e50;
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.8rem;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 3px;
-    background-color: var(--secondary-color);
-  }
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ecf0f1;
 }
 
 .sectionDescription {
-  color: #555;
+  color: #5d6d7e;
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #3498db;
 }
 
-.ceremonyGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
+// Grid layouts
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -80,22 +100,27 @@
   gap: 1.5rem;
 }
 
-.ceremonyCard, .projectCard, .awardCard {
+// Cards
+.projectCard,
+.awardCard {
   background: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-
+  transition: all 0.3s ease;
+  border: 1px solid #ecf0f1;
+  
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
 }
 
+// Image container
 .itemImage {
   width: 100%;
   position: relative;
-  padding-top: 93%; // 615/768 ≈ 0.8
+  padding-top: 65%; // 16:9 aspect ratio
   overflow: hidden;
   
   img {
@@ -104,71 +129,89 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-  }
-
-  .projectCard:hover & img,
-  .awardCard:hover & img,
-  .ceremonyCard:hover & img {
-    transform: scale(1.05);
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
 }
 
+.projectCard:hover .itemImage img,
+.awardCard:hover .itemImage img {
+  transform: scale(1.05);
+}
+
+// Content area
 .itemContent {
   padding: 1.5rem;
-
+  
   h3 {
-    color: var(--primary-color);
+    color: #2c3e50;
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
+    line-height: 1.4;
   }
-
-  p {
-    color: #555;
-    font-size: 1rem;
+  
+  .description {
+    color: #5d6d7e;
+    font-size: 0.95rem;
     line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .date {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    
+    .dateIcon {
+      margin-right: 0.5rem;
+    }
+  }
+  
+  .author {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    
+    .authorIcon {
+      margin-right: 0.5rem;
+    }
   }
 }
 
-/* Responsive adjustments */
+// Responsive design
 @media (max-width: 768px) {
   .newsEventsContainer {
     padding: 2rem 1rem;
   }
-
-  .newsEventsContent {
-    padding: 2rem;
+  
+  .main-title {
+    font-size: 2rem;
   }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
+  
   .sectionTitle {
     font-size: 1.5rem;
   }
-
-  .ceremonyGrid,
+  
   .projectsGrid,
   .awardsGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-
-  .itemImage {
-    height: 220px;
+  
+  .itemContent {
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .newsEventsContent {
-    padding: 1.5rem;
-  }
-
-  .title {
+  .main-title {
     font-size: 1.6rem;
   }
-
-  .itemImage {
-    height: 200px;
+  
+  .sectionTitle {
+    font-size: 1.3rem;
   }
 }

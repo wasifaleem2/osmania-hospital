@@ -1,6 +1,6 @@
 .trusteesSection {
   padding: 5rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--card-bg);
   position: relative;
   overflow: hidden;
 }
@@ -24,13 +24,13 @@
       button {
         &::before {
           font-size: 0.8rem;
-          color: #3b82f6;
+          color: var(--accent-color);
           opacity: 0.5;
         }
       }
 
       &.slick-active button::before {
-        color: #3b82f6;
+        color: var(--accent-color);
         opacity: 1;
       }
     }
@@ -44,7 +44,7 @@
 
     &::before {
       font-size: 2rem;
-      color: #3b82f6;
+      color: var(--accent-color);
       opacity: 0.8;
       transition: opacity 0.3s ease;
     }
@@ -76,7 +76,7 @@
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px var(--box-shadow);
   }
 }
 
@@ -113,7 +113,7 @@
   justify-content: center;
   padding: 2rem;
   text-align: center;
-  color: white;
+  color: var(--white);
 
   .trusteeCard:hover & {
     opacity: 1;
@@ -134,13 +134,13 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: white;
+  color: var(--white);
 }
 
 .trusteeDesignation {
   font-size: 1rem;
   font-weight: 500;
-  color: #3b82f6;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 

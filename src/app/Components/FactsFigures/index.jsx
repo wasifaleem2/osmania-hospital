@@ -3,13 +3,18 @@ import styles from './factsfigures.module.scss';
 
 const FactsFigures = () => {
   const data = [
-    { year: '2013-14', amount: 'Rs.5,223,883/-' },
-    { year: '2014-15', amount: 'Rs.10,364,598/-' },
-    { year: '2015-16', amount: 'Rs.12,034,138/-' },
-    { year: '2016-17', amount: 'Rs.14,907,200/-' },
-    { year: '2017-18', amount: 'Rs.17,369,691/-' },
+    // { year: '2013-14', amount: 'Rs.5,223,883/-' },
+    // { year: '2014-15', amount: 'Rs.10,364,598/-' },
+    // { year: '2015-16', amount: 'Rs.12,034,138/-' },
+    // { year: '2016-17', amount: 'Rs.14,907,200/-' },
+    // { year: '2017-18', amount: 'Rs.17,369,691/-' },
     { year: '2018-19', amount: 'Rs.39,422,580/-' },
     { year: '2019-20', amount: 'Rs.32,861,725/-' },
+    { year: '2020-21', amount: 'Rs.54,878,390/-' },
+    { year: '2021-22', amount: 'Rs.40,188,262/-' },
+    { year: '2022-23', amount: 'Rs.107,737,472/-' },
+    { year: '2023-24', amount: 'Rs.53,082,800/-' },
+    { year: '2024-25', amount: 'Rs.63,090,684/-' },
   ];
 
   return (

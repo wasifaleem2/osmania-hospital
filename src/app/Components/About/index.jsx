@@ -40,7 +40,7 @@ const About = ({ data }) => {
                 </a>
               </div>
               <div className="cs_about_thumb_2">
-              <Image src="/assets/img/about_img_2.jpg" alt="img" width={372} height={289}   />
+              <Image src="/assets/img/about_img_1.jpg" alt="img" width={372} height={289}   />
               <Image src="/assets/img/icons/about_shape_1.png" className="cs_about_thumb_shape_2" alt="img" width={129} height={128}   />
               </div>
               <div className="cs_experience_box cs_center" data-aos="zoom-in">

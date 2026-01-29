@@ -25,6 +25,7 @@ import {
   FaBone,
   FaFlask,
   FaNutritionix,
+  FaFemale,
 } from "react-icons/fa";
 import { FaScissors, FaUserDoctor } from "react-icons/fa6";
 import Link from "next/link";
@@ -76,6 +77,7 @@ const Service = ({ data }) => {
       FaRunning: FaRunning,
 
       FaUserDoctor: FaUserDoctor,
+      FaFemale: FaFemale,
       FaNutritionix: FaNutritionix,
       FaBrain: FaBrain,
       FaLungs: FaLungs,
@@ -114,16 +116,17 @@ const Service = ({ data }) => {
 
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>
-                <Link href={service.link}>{service.title}</Link>
+                {/* <Link href={service.link}>{service.title}</Link> */}
+                <p>{service.title}</p>
               </h3>
               <p className={styles.cardSubtitle}>{service.subtitle}</p>
 
-              <Link href={service.link} className={styles.readMore}>
+              {/* <Link href={service.link} className={styles.readMore}>
                 Read More
                 <span className={styles.arrow}>
                   <FaAngleDoubleRight />
                 </span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         ))}

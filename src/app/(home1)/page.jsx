@@ -1,22 +1,17 @@
 import React from 'react';
 import HeroSection from '../Components/HeroSection';
 import Section from '../Components/Section';
-import CtaSection from '../Components/CtaSection';
 import About from '../Components/About';
 import CounterSection from '../Components/FunSection/CounterSection';
 import Service from '../Components/Service';
 import TeamSection from '../Components/TeamSection';
-import BrandsSlider from '../Components/BrandsSection';
-import ChooseUs from '../Components/ChooseUs';
 import ProjectSection from '../Components/ProjectSection';
-import CtaSection1 from '../Components/CtaSection/CtaSection1';
 import MedicalTabSection from '../Components/MedicalTabSection';
-import ContactSection2 from '../Components/ContactSection/ContactSection2';
-import BlogSection from '../Components/BlogsSection';
 import DonationBox from '../Components/DonationBoxHome';
 import BoardOfTrustees from '../Components/BoardOfTrustees';
 import TopVideo from '../Components/TopVideo';
 import ReportDownloadWidget from '../Components/ReportDownloadWidget';
+import CertificationsWidget from '../Components/CertificationsWidget';
 
 const heroData = {
     primarySlider: [
@@ -105,164 +100,6 @@ const heroData = {
     headImgUrl: '/assets/img/about_img_1.jpg',
   };
   
-  const countersData = [
-    {
-      iconUrl: '/assets/img/icons/counter_icon_1.png',
-      number: '567+',
-      title: 'Active Clients',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_2.png',
-      number: '23K+',
-      title: 'Team Support',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_3.png',
-      number: '241+',
-      title: 'Projects Complete',
-    },
-    {
-      iconUrl: '/assets/img/icons/counter_icon_4.png',
-      number: '16K+',
-      title: 'Award Winner',
-    },
-  ];
-  
-  const serviceData = {
-    subtitle: 'OUR BEST SERVICE',
-    title: 'High-Quality Services This Doctor',
-    description:
-      'We are privileged to work with hundreds of future-thinking medial,<br> including many of the world’s top hardware, software, and<br> brands, feel safe and comfortable in establishing.',
-    services: [
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_1.png',
-        index: '01',
-        title: 'Pharmacology',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_2.png',
-        index: '02',
-        title: 'Orthopedic',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_3.png',
-        index: '03',
-        title: 'Hematology',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_4.png',
-        index: '04',
-        title: 'Plastic Surgery',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_5.png',
-        index: '05',
-        title: 'Neurology',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_6.png',
-        index: '06',
-        title: 'Ophthalmology',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_7.png',
-        index: '07',
-        title: 'Dental Care',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-      {
-        backgroundImage: '/assets/img/service_bg.jpg',
-        iconUrl: '/assets/img/icons/service_icon_8.png',
-        index: '08',
-        title: 'Cardiology',
-        subtitle: 'Medical competitor research startup to financial',
-        link: '/service/service-details',
-      },
-    ],
-    footerIcon: '/assets/img/icons/service_footer_icon_1.png',
-    footerText:
-      'Delivering tomorrow’s health care for your family.<br>medical this View',
-    footerLink: '/',
-    footerLinkText: 'SEE MORE',
-  };
-  
-  const teamData = {
-    subtitle: 'OUR TEAM MEMBER',
-    title: 'Meet Our Specialist This <br />Doctor Meeting',
-    sliderData: [
-      {
-        name: 'Dr. Norma Pedric',
-        profession: 'Neurologist',
-        imageUrl: '/assets/img/team_1.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. James Lewis',
-        profession: 'Neurologist',
-        imageUrl: '/assets/img/team_3.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Sophia Anderson',
-        profession: 'Neurologist',
-        imageUrl: '/assets/img/team_8.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. Michael Thompson',
-        profession: 'Neurologist',
-        imageUrl: '/assets/img/team_5.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-      {
-        name: 'Dr. David Wilson',
-        profession: 'Neurologist',
-        imageUrl: '/assets/img/team_6.jpg',
-        link: '/doctors/doctor-details',
-        facebook: '/',
-        pinterest: '/',
-        twitter: '/',
-        instagram: '/',
-      },
-    ],
-  };
-
   const BoardTrusteesData = {
     subtitle: 'MEMBERS',
     title: 'Board Of Trustees',
@@ -317,289 +154,6 @@ const heroData = {
         twitter: '/',
         instagram: '/',
       },
-    ],
-  };
-  
-  const brandData = [
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 1' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 2' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 3' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 4' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 5' },
-    { image: '/assets/img/envato-logo.png', altText: 'Brand 6' },
-  ];
-  
-  const sectionData = {
-    subtitle: 'WHY CHOOSE US',
-    title: 'Medical Ready To Get This <br /> Health Solution.',
-    services: [
-      {
-        iconUrl: '/assets/img/icons/service_icon_9.png',
-        title: 'Expert Care',
-        subtitle: 'Medical competitor research startup to financial',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_10.png',
-        title: 'Emergency Help',
-        subtitle: 'Medical competitor research startup to financial',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_11.png',
-        title: 'Qualified Doctors',
-        subtitle: 'Medical competitor research startup to financial',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_12.png',
-        title: 'Medical Advices',
-        subtitle: 'Medical competitor research startup to financial',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_13.png',
-        title: 'Medical Research',
-        subtitle: 'Medical competitor research startup to financial',
-      },
-      {
-        iconUrl: '/assets/img/icons/service_icon_14.png',
-        title: 'Affordable Prices',
-        subtitle: 'Medical competitor research startup to financial',
-      },
-    ],
-  };
-  
-  const projectData = {
-    title: 'All The Great Work That<br> Medical Service',
-    subtitle: 'OUR PORTFOLIO',
-    description:
-      'We are privileged to work with hundreds of future-thinking medial, including many of the world’s top hardware, software, and brands, feel safe and comfortable in establishing.',
-    tabs: [
-      { id: 'dental', label: 'Dental' },
-      { id: 'cardiology', label: 'Cardiology' },
-      { id: 'neurology', label: 'Neurology' },
-      { id: 'medical', label: 'Medical' },
-    ],
-    tabData: [
-      {
-        id: 'dental',
-        items: [
-          {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Dental',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 2,
-          },
-          {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Laboratory Technologist',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 3,
-          },
-        ],
-      },
-      {
-        id: 'cardiology',
-        items: [
-          {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Laboratory Technologist',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 3,
-          },
-          {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Dental',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 2,
-          },
-        ],
-      },
-      {
-        id: 'neurology',
-        items: [
-          {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-        ],
-      },
-      {
-        id: 'medical',
-        items: [
-          {
-            imgUrl: '/assets/img/project_3.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_2.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-          {
-            imgUrl: '/assets/img/project_1.jpg',
-            title: 'Medical Of Working',
-            subtitle:
-              'We businesss standard chunk of Ipsum used since is Agency &amp; Star tup.',
-            index: 1,
-          },
-        ],
-      },
-    ],
-  };
-  
-  const ctaData1 = {
-    videoLink: 'https://www.youtube.com/embed/rRid6GCJtgc',
-    videoButtonText: 'WATCH VIDEO',
-    subtitle: 'OUR WATCH VIDEO',
-    title: 'Professional Medical Care Measure Medical.',
-    description:
-      'We are privileged to work with hundreds of future-thinking medial, including many of the world’s top hardware, software, and brands , feel safe and comfortable in establishing.',
-    buttonLink: '/contact',
-    buttonText: 'Video More',
-    brandImage: '/assets/img/medical_brand.png',
-  };
-  
-  const medicalTabsData = {
-    subtitle: 'Service Offerings',
-    title: 'Explore Our Service<br> Offerings',
-    tabsTitle: [
-      {
-        href: 'brain_althim',
-        iconUrl: '/assets/img/icons/tab_link_icon_1.png',
-        label: 'Modern Technology',
-      },
-      {
-        href: 'emergency',
-        iconUrl: '/assets/img/icons/tab_link_icon_2.png',
-        label: 'Success of Treatment',
-      },
-      {
-        href: 'heart_beat',
-        iconUrl: '/assets/img/icons/tab_link_icon_3.png',
-        label: 'Certified Doctors',
-      },
-      {
-        href: 'blood_test',
-        iconUrl: '/assets/img/icons/tab_link_icon_4.png',
-        label: 'Medical Advice',
-      },
-    ],
-    tabsData: [
-      {
-        id: 'brain_althim',
-        imageSrc: '/assets/img/offerings03.jpg',
-        title: 'We are here to hear and heal your',
-        subtitle:
-          'We are privileged to work with hundreds of future-thinking medial, including many of the world’s top hardware, software, and brands , feel safe and comfortable in establishing.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Medical sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'We are occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est healty.',
-          },
-        ],
-        linkHref: '/contact',
-        buttonText: 'Read More',
-      },
-      {
-        id: 'emergency',
-        imageSrc: '/assets/img/offerings02.jpg',
-        title: 'Treatment patients in primary care',
-        subtitle:
-          'We are privileged to work with hundreds of future-thinking medical, including many of the world’s top hardware, software, and brands, feel safe and comfortable in establishing.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Medical sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'We are occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est healty.',
-          },
-        ],
-        linkHref: '/contact',
-        buttonText: 'Read More',
-      },
-      {
-        id: 'heart_beat',
-        imageSrc: '/assets/img/offerings01.jpg',
-        title: 'Accreditation within a given specialty',
-        subtitle:
-          'We are privileged to work with hundreds of future-thinking medical, including many of the world’s top hardware, software, and brands, feel safe and comfortable in establishing.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Medical sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'We are occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est healty.',
-          },
-        ],
-        linkHref: '/contact',
-        buttonText: 'Read More',
-      },
-      {
-        id: 'blood_test',
-        imageSrc: '/assets/img/offerings04.jpg',
-        title: 'Better Health While Aging health',
-        subtitle:
-          'We are privileged to work with hundreds of future-thinking medical, including many of the world’s top hardware, software, and brands, feel safe and comfortable in establishing.',
-        points: [
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'Medical sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum.',
-          },
-          {
-            icon: '/assets/img/icons/check_icon_1.png',
-            text: 'We are occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est healty.',
-          },
-        ],
-        linkHref: '/contact',
-        buttonText: 'Read More',
-      },
-      // Add other tab data here
     ],
   };
 
@@ -689,19 +243,22 @@ const page = () => {
         {/* End Hero Section */}
 
         <Section
-          topSpaceLg="70"
-          topSpaceMd="110"
-          bottomSpaceLg="80"
-          bottomSpaceMd="120"
+          topSpaceLg="0"
+          topSpaceMd="0"
+          bottomSpaceLg="0"
+          bottomSpaceMd="0"
         >
           <TopVideo />
         </Section>
+
+        <ReportDownloadWidget />
+        
         {/* Start Board of Trustees Section */}
         <Section
-          topSpaceLg="70"
-          topSpaceMd="110"
-          bottomSpaceLg="80"
-          bottomSpaceMd="120"
+          topSpaceLg="0"
+          topSpaceMd="0"
+          bottomSpaceLg="0"
+          bottomSpaceMd="0"
         >
           <BoardOfTrustees
             data={BoardTrusteesData}
@@ -710,28 +267,10 @@ const page = () => {
           />
         </Section>
 
-        {/* Start CTA Section */}
-        {/* <Section
-        className={
-          'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
-        }
-      >
-        <CtaSection data={ctaData} />
-      </Section> */}
 
-        {/* <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        className={'cs_team_section position-relative'}
-      >
-        <TeamSection
-          hr={true}
-          variant={'cs_pagination cs_style_2'}
-          data={teamData}
-        />
-      </Section> */}
+       
 
-        <ReportDownloadWidget />
+        
         {/* <Section
         className={
           'cs_cta cs_style_1 cs_blue_bg position-relative overflow-hidden'
@@ -754,85 +293,11 @@ const page = () => {
       </Section> */}
         {/* End About Section */}
 
-        {/* Start Counter */}
-        {/* <Section className="cs_counter_area cs_gray_bg">
-        <CounterSection data={countersData} />
-      </Section> */}
-        {/* End Counter */}
-
-        {/* Start Service Section */}
-        {/* <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className={'cs_gray_bg'}
-      >
-        <Service cardBg={'cs_gray_bg'} data={serviceData} />
-      </Section> */}
-        {/* End Service Section */}
-
-        {/* Start Brand Section */}
-        {/* <Section topSpaceLg="70" topSpaceMd="90" className="cs_brands_section">
-        <BrandsSlider data={brandData} />
-      </Section> */}
-
-        {/* End Brand Section */}
-
-        {/* Start Why Choose Us Section */}
-        {/* <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className="cs_gray_bg cs_bg_filed"
-        backgroundImage="/assets/img/service_bg_2.jpg"
-      >
-        <ChooseUs data={sectionData} />
-      </Section> */}
-        {/* End Why Choose Us Section */}
-
-        {/* Start Projects Section */}
-        {/* <Section topSpaceLg="70" topSpaceMd="110" className="cs_tabs">
-        <ProjectSection data={projectData} />
-      </Section> */}
-        {/* End Projects Section */}
-
-        {/* Start CTA Section */}
-        {/* <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-        className="cs_cta cs_style_2 cs_blue_bg cs_bg_filed cs_center"
-        backgroundImage="/assets/img/cta_bg_1.jpeg"
-      >
-        <CtaSection1 data={ctaData1} />
-      </Section> */}
-        {/* End CTA Section */}
-
-        {/* Start Medical Tab Section */}
-        {/* <Section topSpaceLg="70" topSpaceMd="110">
-        <MedicalTabSection data={medicalTabsData} />
-      </Section> */}
-        {/* End Medical Tab Section */}
-
-        {/* Start Contact Solution */}
-        {/* <ContactSection2></ContactSection2> */}
-        {/* End Contact Solution */}
 
         {/* Donation Box Section  */}
         <DonationBox />
+        <CertificationsWidget />
 
-        {/* <Section
-        topSpaceLg="70"
-        topSpaceMd="110"
-        bottomSpaceLg="80"
-        bottomSpaceMd="120"
-      >
-        <BlogSection data={blogsData} />
-      </Section> */}
-        {/* End Blog Solution */}
       </div>
     );
 };

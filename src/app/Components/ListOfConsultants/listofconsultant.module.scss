@@ -20,6 +20,7 @@
   gap: 0;
   margin-top: 2rem;
   justify-content: center;
+  align-items: center;
 }
 
 .consultantCard {
@@ -43,7 +44,7 @@
 }
 
 .consultantImage {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: contain;
   border: 1px solid #eee;

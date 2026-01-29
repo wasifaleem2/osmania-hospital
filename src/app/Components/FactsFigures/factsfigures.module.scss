@@ -9,7 +9,7 @@
     background-color: var(--card-bg) !important;
     padding: 3rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow);
     
     .fnfTitle {
       color: var(--primary-color);
@@ -50,7 +50,7 @@
       .fnfTable {
         width: 100%;
         border-collapse: collapse;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px var(--box-shadow);
         
         .fnfTableHeader {
           background-color: var(--primary-color);
@@ -62,16 +62,16 @@
         
         .fnfTableCell {
           padding: 1.1rem;
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid var(--gray-color);
           color: #444;
         }
         
         .fnfEvenRow {
-          background-color: #ffffff;
+          background-color: var(--white);
         }
         
         .fnfOddRow {
-          background-color: #f8f9fa;
+          background-color: var(--white);
         }
       }
     }

@@ -2,8 +2,8 @@ export const MANAGEMENT = [
   {
     id: 1,
     name: "Mr. Shakeel Ahmed Mushtaq",
-    designation: "Chief Operating Officer",
-    bio: "Oversees the operational strategy and execution of the organization, ensuring efficiency and effectiveness across all departments.",
+    designation: "Chief Executive Officer",
+    bio: "Oversees the execution of the organization, ensuring efficiency and effectiveness across all departments.",
     image: "/assets/img/member-dummy.jpg",
   },
   {
@@ -30,13 +30,13 @@ export const MANAGEMENT = [
   {
     id: 5,
     name: "Dr. Ume-Rabab Mahar",
-    designation: "Senior RMO",
-    bio: "Experienced medical officer overseeing patient care and hospital operations.",
+    designation: "Manager Medical Department",
+    bio: "Experienced medical officer overseeing Medical Department.",
     image: "/assets/img/member-dummy.jpg",
   },
   {
     id: 6,
-    name: "Mr. Muhammad Arshad",
+    name: "Mr. Imran",
     designation: "OT Incharge",
     bio: "Supervises operating theater activities, ensuring medical procedures run seamlessly.",
     image: "/assets/img/member-dummy.jpg",

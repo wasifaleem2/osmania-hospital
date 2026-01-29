@@ -9,7 +9,7 @@
     background-color: var(--card-bg) !important;
     padding: 3rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow);
 
     .contactTitle {
       color: var(--primary-color);
@@ -54,21 +54,21 @@
 
           .addressCard,
           .contactCard {
-            background: #ecf0f4;
+            background: var(--gray-color);
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 4px var(--box-shadow);
 
             .sectionHeading {
               color: var(--primary-color);
               font-size: 1.2rem;
               margin-bottom: 1rem;
               padding-bottom: 0.5rem;
-              border-bottom: 2px solid #e2e8f0;
+              border-bottom: 2px solid var(--gray-color);
             }
 
             .contactText {
-              color: #4a5568;
+              color: var(--light-text);
               font-size: 1.1rem;
               line-height: 1.6;
               margin-bottom: 0.8rem;
@@ -96,7 +96,7 @@
         min-width: 300px;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px var(--box-shadow);
       }
     }
   }

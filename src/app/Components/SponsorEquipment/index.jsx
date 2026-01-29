@@ -5,38 +5,38 @@ const SponsorEquipment = () => {
   const equipmentList = [
     {
       id: 1,
-      name: "C-ARM For Orthopaedic / Urologist",
-      description: "C-Arm helps Orthopedic Surgeons by providing images during surgery. By using this instrument the implant is placed in the correct place and many complications are avoided. It has now become necessary in almost all orthopedic surgeries.",
-      cost: "7 Million PKR",
-      image: "/assets/img/c-arm.jpg"
+      name: "Leign Phaco System",
+      description: "",
+      cost: "12.30 Million PKR",
+      image: ""
     },
     {
       id: 2,
-      name: "OPG For Dental Department",
-      description: "An Orthopantomogram or OPG is a special type of X-Ray that takes images of lower face, teeth, jaw joints and maxillary sinuses. The teeth are displayed in a long flat line. This X-Ray is useful to detail the number of teeth as well as their position and growth.",
-      cost: "3 Million PKR",
-      image: "/assets/img/opg.jpg"
+      name: "Slit Lamp",
+      description: "",
+      cost: "5 Million PKR",
+      image: ""
     },
     {
       id: 3,
-      name: "Portable X-RAY",
-      description: "Portable X-Ray is necessary for the critically ill patients in the ICU or NICU who cannot be moved to the X-Ray department.",
-      cost: "2.5 Million PKR",
-      image: "/assets/img/portable-xray.jpg"
+      name: "Microscope for Eye Surgeries",
+      description: "",
+      cost: "2 Million PKR",
+      image: ""
     },
     {
       id: 4,
-      name: "10 ICU Beds",
-      description: "Ten beds and Ten patients monitor are required for ICU Expansion project.",
-      cost: "Please inquire",
-      image: "/assets/img/icu-beds.jpg"
+      name: "Ventilators for Adults 2 Nos",
+      description: "",
+      cost: "15 Million PKR",
+      image: ""
     },
     {
       id: 5,
-      name: "Solar System of 100 KW",
-      description: "To cut down the high electric bill and diesel generator expenses, it is suggested to place 100kw solar system which would provide cheap electricity.",
-      cost: "15 Million PKR",
-      image: "/assets/img/solar-system.jpg"
+      name: "Patient Beds 50 Nos",
+      description: "",
+      cost: "11.25 Million PKR",
+      image: ""
     }
   ];
 
