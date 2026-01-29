@@ -64,3 +64,19 @@
   width: 30px;
   padding-left: 5px;
 }
+
+.page_loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.369);
+  font-size: 50px;
+}
+
+.main-page-content {
+  min-height: 100vh;
+}

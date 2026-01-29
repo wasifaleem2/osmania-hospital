@@ -1,0 +1,386 @@
+.certificationsSection {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  color: var(--blue-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red-color), var(--blue-color));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.certCard {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(30, 64, 175, 0.15);
+    border-color: var(--red-color);
+
+    .cardIcon {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, var(--red-color), var(--blue-color));
+    }
+
+    .arrowIcon {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #60a5fa, var(--red-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.cardContent {
+  flex: 1;
+  margin-bottom: 25px;
+}
+
+.certTitle {
+  font-size: 18px;
+  color: var(--blue-color);
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.certDescription {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.viewText {
+  font-size: 14px;
+  color: var(--red-color);
+  font-weight: 500;
+}
+
+.arrowIcon {
+  font-size: 18px;
+  color: var(--red-color);
+  transition: transform 0.3s ease;
+}
+
+.trustNote {
+  background: linear-gradient(135deg, var(--blue-color), var(--red-color));
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.2);
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue-color);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #1e3a8a;
+    transform: scale(1.1);
+  }
+}
+
+.modalHeader {
+  padding: 40px 40px 20px;
+  text-align: center;
+  background: var(--gray-color);
+}
+
+.modalTitle {
+  font-size: 24px;
+  color: var(--blue-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.modalDescription {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.imageContainer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.certImage {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imageNavigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: var(--gray-color);
+  border-radius: 8px;
+}
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--red-color);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--blue-color);
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.pageIndicator {
+  font-size: 16px;
+  color: #4b5563;
+  font-weight: 500;
+  min-width: 60px;
+  text-align: center;
+}
+
+.modalFooter {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  background: var(--gray-color);
+}
+
+.viewHint {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificationsSection {
+    padding: 60px 15px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionSubtitle {
+    font-size: 16px;
+  }
+
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .certCard {
+    padding: 25px;
+  }
+
+  .modalHeader {
+    padding: 30px 20px 15px;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .imageContainer {
+    padding: 20px;
+  }
+
+  .certImage {
+    max-height: 300px;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificationsSection {
+    padding: 40px 10px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .trustNote {
+    padding: 20px;
+    
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}

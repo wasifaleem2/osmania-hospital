@@ -1,0 +1,164 @@
+.trusteesContainer {
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trusteesContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+  }
+}
+
+.paragraph {
+  color: #444;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trusteesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .image {
+    transform: scale(1.05);
+  }
+}
+
+.info {
+  padding: 1.8rem;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.designation {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive improvements */
+@media (max-width: 1024px) {
+  .trusteesGrid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trusteesContainer {
+    padding: 3rem 1.5rem;
+  }
+
+  .trusteesContent {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .trusteesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+
+  .info {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trusteesContainer {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .trusteesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .imageWrapper {
+    padding-top: 100%;
+  }
+}

@@ -1,52 +1,67 @@
 import React from 'react';
+import styles from './donationbox.module.scss';
+import Link from 'next/link';
+
 const DonationBox = () => {
+  // Donation type links
+  const donationLinks = [
+    { label: "Zakat", href: "/zakat" },
+    { label: "Donations / Sadqa", href: "/donations" },
+    { label: "Sponsor An Equipment", href: "/sponsor-an-equipment" },
+  ];
+  
   return (
-    <div className="donation-box-container">
-      {/* Top Image with Text Overlay */}
-      <div className="donation-box-top">
-        <div className="donation-box-top-text">
-          <h2>Donation box</h2>
-          <h2>for</h2>
-          <h2>deserving people</h2>
-        </div>
-        <div className="donation-box-top-image">
-          <img src={"assets/img/banner.jpeg"} alt="Donation Banner" />
+    <div className={styles.donationBox}>
+      {/* Hero Section with Overlay - SEPARATE FROM MAIN BOX */}
+      <div className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h2 className={styles.heroTitle}>Donation Box</h2>
+          <h3 className={styles.heroSubtitle}>Support Deserving Patients</h3>
+          <div className={styles.heroDivider}></div>
+          <p className={styles.heroText}>Your contribution makes a difference in someone&apos;s life</p>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="donation-box-content">
-        {/* Left Image */}
-        <div className="donation-box-left-image">
-          <img src="assets/img/osmania-logo.png" alt="Deserving people" />
-          {/* <div>
-            <p>OSMANIA HOSPITAL</p>
-            <p>DONATE NOW</p>
-          </div> */}
+      {/* Main Content Box */}
+      <div className={styles.mainBox}>
+        <div className={styles.boxHeader}>
+          <h2 className={styles.boxTitle}>How can you help deserving patients?</h2>
+          {/* <p className={styles.boxSubtitle}>
+            Your support can transform lives and provide essential medical care 
+            to those who need it most. Choose from different ways to contribute:
+          </p> */}
         </div>
-
-        {/* Donation Details */}
-        <div className="donation-box-details">
-          <h2>Osmania Hospital - Donate Now</h2>
-          <p>Donations can be deposited directly in the following bank account.</p>
-          <p><strong>Title of Account:</strong> Hyderabad Relief and Rehabilitation Trust</p>
-          <p><strong>Account No.:</strong> 0105-8020-1003-0799</p>
-          <p><strong>IBAN:</strong> PK78MUCB0105802010030799</p>
-          <p><strong>Bank:</strong> MCB Bank Ltd.</p>
-
-          {/* Input Field */}
-          <div className="donation-box-input">
-            <label htmlFor="account">Enter Account:</label>
-            <input type="text" id="account" name="account" />
-          </div>
-
-          {/* Donation Amount Options */}
-          <div className="donation-box-amounts">
-            <button>1,000</button>
-            <button>2,000</button>
-            <button>5,000</button>
-            <button>10,000</button>
-          </div>
+        
+        <div className={styles.donationLinks}>
+          {donationLinks.map((link, index) => (
+            <Link 
+              key={index} 
+              href={link.href}
+              className={styles.donationLink}
+            >
+              <div className={styles.linkContent}>
+                <span className={styles.linkIcon}>
+                  {index === 0 ? "🕌" : index === 1 ? "🤲" : "🏥"}
+                </span>
+                <div className={styles.linkTextContainer}>
+                  <span className={styles.linkText}>{link.label}</span>
+                  <span className={styles.linkDescription}>
+                    {index === 0 ? "Islamic obligation to support those in need" : 
+                     index === 1 ? "General donations for patient welfare" : 
+                     "Help us acquire essential medical equipment"}
+                  </span>
+                </div>
+              </div>
+              <span className={styles.linkArrow}>→</span>
+            </Link>
+          ))}
+        </div>
+        
+        <div className={styles.boxFooter}>
+          <p>
+            Each donation type serves a specific purpose. Click on any option above 
+            to learn more about how your contribution will be used.
+          </p>
         </div>
       </div>
     </div>

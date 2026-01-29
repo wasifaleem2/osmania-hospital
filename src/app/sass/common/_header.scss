@@ -96,7 +96,7 @@
     align-items: center;
     height: 100%;
     gap: 5px 30px;
-    @media (max-width: 1290px) {
+    @media (max-width: 1365px) {
       gap: 5px 20px;
     }
   }
@@ -116,7 +116,7 @@
   &.cs_type_1 {
     .cs_main_header_in {
       height: 110px;
-      @media (max-width: 1290px) {
+      @media (max-width: 1365px) {
         height: 80px;
       }
     }
@@ -127,7 +127,7 @@
       top: 0;
       height: 110px;
       overflow: hidden;
-      @media (max-width: 1290px) {
+      @media (max-width: 1365px) {
         height: 80px;
       }
     }
@@ -167,7 +167,7 @@
 }
 
 /* Desktop styles (≥1101px) */
-@media screen and (min-width: 1101px) {
+@media screen and (min-width: 1365px) {
   .cs_nav {
     display: flex;
     align-items: center;
@@ -193,6 +193,15 @@
         }
 
         > a {
+          padding: 10px 15px;
+          display: inline-flex;
+          position: relative;
+          height: inherit;
+          align-items: center;
+          justify-content: center;
+        }
+
+        > p {
           padding: 10px 15px;
           display: inline-flex;
           position: relative;
@@ -292,7 +301,7 @@
       position: relative;
     }
     .cs_mega_wrapper {
-      width: 1290px !important;
+      width: 1365px !important;
       display: flex !important;
       position: fixed;
       top: 100px !important;
@@ -315,6 +324,19 @@
           margin-bottom: 6px;
         }
         a {
+          padding: 0;
+          display: block;
+          text-align: center;
+          font-size: 13px;
+          line-height: 1.4em;
+          font-weight: 500;
+          &:hover {
+            img {
+              border-color: #d5d4d4;
+            }
+          }
+        }
+        p {
           padding: 0;
           display: block;
           text-align: center;
@@ -364,8 +386,8 @@
   }
 }
 
-/* Mobile styles (≤1290px) */
-@media screen and (max-width: 1290px) {
+/* Mobile styles (≤1365px) */
+@media screen and (max-width: 1365px) {
   .cs_site_header.cs_style_1 {
     .container {
       max-width: 100%;
@@ -489,6 +511,12 @@
       a {
         display: block;
         padding: 10px 15px;
+        line-height: 16px;
+      }
+
+      p {
+        display: block;
+        padding: 10px 15px 0px 15px;
         line-height: 16px;
       }
       
@@ -618,7 +646,7 @@
   transition: all 0.4s ease;
   background-color: var(--white);
   
-  @media (max-width: 1290px) {
+  @media (max-width: 1365px) {
     opacity: 1;
     box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
   }

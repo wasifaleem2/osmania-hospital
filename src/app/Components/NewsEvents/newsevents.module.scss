@@ -1,0 +1,217 @@
+// newsevents.module.scss
+
+.newsEventsContainer {
+  padding: 4rem 2rem;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+.newsEventsContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1.5rem;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+  }
+}
+
+// Loading state
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+}
+
+// Error state
+.error {
+  color: #e74c3c;
+  background-color: #fddede;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem 0;
+  border-left: 5px solid #e74c3c;
+}
+
+// No data state
+.noData {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+// Event sections
+.eventSection {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.sectionDescription {
+  color: #5d6d7e;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid #3498db;
+}
+
+// Grid layouts
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.awardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+// Cards
+.projectCard,
+.awardCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #ecf0f1;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Image container
+.itemImage {
+  width: 100%;
+  position: relative;
+  padding-top: 65%; // 16:9 aspect ratio
+  overflow: hidden;
+  
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
+.projectCard:hover .itemImage img,
+.awardCard:hover .itemImage img {
+  transform: scale(1.05);
+}
+
+// Content area
+.itemContent {
+  padding: 1.5rem;
+  
+  h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .description {
+    color: #5d6d7e;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .date {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    
+    .dateIcon {
+      margin-right: 0.5rem;
+    }
+  }
+  
+  .author {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    
+    .authorIcon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .newsEventsContainer {
+    padding: 2rem 1rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .projectsGrid,
+  .awardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .itemContent {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.6rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+}
