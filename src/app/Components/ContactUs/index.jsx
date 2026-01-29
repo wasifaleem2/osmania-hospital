@@ -4,8 +4,10 @@ import LocationMap from "../LocationMap/Index";
 
 const ContactUs = () => {
   const mapData = {
+    // mapSrc:
+    //   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.664763302964!2d67.02885631500986!3d24.9146069840293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f5e5a1d5e5d%3A0x8d1c5a5d5a5d5a5d!2sOsmania%20Hospital%20Karachi!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s",
     mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.664763302964!2d67.02885631500986!3d24.9146069840293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f5e5a1d5e5d%3A0x8d1c5a5d5a5d5a5d!2sOsmania%20Hospital%20Karachi!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.508535492193!2d67.0494443!3d24.8805556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ef0a6715af3%3A0x29c62b40332ce1c9!2sOsmania%20General%20Hospital!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk",
   };
 
   return (

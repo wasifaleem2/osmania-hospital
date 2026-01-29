@@ -10,9 +10,9 @@ const ReportDownloadWidget = () => {
         <div className="widget-icon">
           <FaFileAlt />
         </div>
-        <h2 className="widget-title">View Your Laboratory Reports</h2>
+        <h2 className="widget-title">View Your Medical Reports</h2>
         <p className="widget-description">
-          Click below to view and download your laboratory test results.
+          Click below to view your Medical test results.
         </p>
         <Link href="/reports" className="widget-link">
           View Reports

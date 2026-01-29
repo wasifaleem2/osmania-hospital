@@ -4,7 +4,7 @@ export const TRUSTEES = [
     name: "Mr. Muhammad Ateequllah",
     designation: "Chairman",
     bio: "An Engineer by profession with about 60 years of Management & Engineering experience. He has been Managing Director of Metropolitan Steel Corporation of Pakistan and Hashoo Steel Industries / Gel Caps belonging to Hashoo Group for about 17 years. He served as the Executive Director for about 20 years with International Industries Limited & International Steels Limited, leading steel pipe manufacturer and Cold Rolled / Galvanized Steel Coils. He held the position of Vice Chairman and is now Chairman of Hyderabad Relief & Rehabilitation Trust.",
-    image: "/assets/img/trustees/Muhammad Ateequllah.jpg",
+    image: "/assets/img/trustees/Muhammad ateequllah.jpg",
   },
   {
     id: 2,

@@ -5,9 +5,9 @@ import Link from 'next/link';
 const DonationBox = () => {
   // Donation type links
   const donationLinks = [
-    { label: "Zakat", href: "/help-us/zakat" },
-    { label: "Donations / Sadqa", href: "/help-us/donations" },
-    { label: "Sponsor An Equipment", href: "/help-us/sponsor-an-equipment" },
+    { label: "Zakat", href: "/zakat" },
+    { label: "Donations / Sadqa", href: "/donations" },
+    { label: "Sponsor An Equipment", href: "/sponsor-an-equipment" },
   ];
   
   return (

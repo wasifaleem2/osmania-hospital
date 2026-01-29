@@ -20,15 +20,15 @@ const Footer = () => {
     phone: '+92 (21) 34123450',
     phone2: '+92 (21) 34121053',
     phone3: '+92 (21) 34120292',
-    facebookHref: 'https://www.facebook.com/osmania.hospital/',
+    facebookHref: 'https://www.facebook.com/Osmaniahospitalkhi/',
     widgets: [
       {
         title: 'Quick Links',
         links: [
           { href: '/', text: 'Home' },
-          { href: '/about', text: 'About Us' },
-          { href: '/service', text: 'Services' },
-          { href: '/contact', text: 'Contact' },
+          { href: '/policies', text: 'Policies' },
+          { href: '/our-services', text: 'Services' },
+          { href: '/contact-us', text: 'Contact' },
         ],
       },
     ],
@@ -104,12 +104,12 @@ const Footer = () => {
               <Link href={data.facebookHref} target="_blank">
                 <FaFacebookF />
               </Link>
-              <Link href="#">
+              {/* <Link href="https://www.facebook.com/Osmaniahospitalkhi/">
                 <BsTwitter />
               </Link>
               <Link href="#">
                 <FaInstagram />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

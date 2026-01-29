@@ -124,7 +124,7 @@ const ReportsPage = () => {
           />
           <div className="hospital-info">
             <h1>OSMANIA HOSPITAL</h1>
-            <h2>LABORATORY REPORT PORTAL</h2>
+            <h2>Medical REPORT PORTAL</h2>
           </div>
         </div>
       </div>
@@ -285,7 +285,7 @@ const ReportsPage = () => {
                           </td>
                           {/* <td className="description-cell">
                             <div className="description-content">
-                              {report?.description || "Laboratory test report"}
+                              {report?.description || "Medical test report"}
                             </div>
                           </td> */}
                           <td className="date-cell">
