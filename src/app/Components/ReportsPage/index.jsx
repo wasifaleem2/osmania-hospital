@@ -118,7 +118,7 @@ const ReportsPage = () => {
       <div className="reports-header">
         <div className="hospital-banner">
           <img
-            src="assets/img/osmania-logo.png"
+            src="/assets/img/osmania-logo.png"
             alt="Hospital Logo"
             className="hospital-logo"
           />
