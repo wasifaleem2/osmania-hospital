@@ -120,11 +120,6 @@ const NewsEvents = () => {
                               src={item.imageUrl}
                               alt={item.title || `Event ${itemIndex + 1}`}
                               loading="lazy"
-                              onError={(e) => {
-                                e.currentTarget.src =
-                                  "/assets/img/placeholder.jpg";
-                                e.currentTarget.alt = "Image not available";
-                              }}
                             />
                           </div>
                         )}
