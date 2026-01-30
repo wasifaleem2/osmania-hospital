@@ -1,5 +1,3 @@
-// newsevents.module.scss
-
 .newsEventsContainer {
   padding: 4rem 2rem;
   font-family: "Arial", sans-serif;
@@ -40,7 +38,6 @@
   font-size: 1.2rem;
 }
 
-// Error state
 .error {
   color: #e74c3c;
   background-color: #fddede;
@@ -51,7 +48,6 @@
   border-left: 5px solid #e74c3c;
 }
 
-// No data state
 .noData {
   text-align: center;
   padding: 3rem;
@@ -65,7 +61,6 @@
   }
 }
 
-// Event sections
 .eventSection {
   margin-bottom: 4rem;
 }
@@ -87,7 +82,6 @@
   border-left: 3px solid #3498db;
 }
 
-// Grid layouts
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -100,7 +94,6 @@
   gap: 1.5rem;
 }
 
-// Cards
 .projectCard,
 .awardCard {
   background: white;
@@ -116,11 +109,10 @@
   }
 }
 
-// Image container
 .itemImage {
   width: 100%;
   position: relative;
-  padding-top: 65%; // 16:9 aspect ratio
+  padding-top: 65%;
   overflow: hidden;
   
   img {
@@ -139,7 +131,6 @@
   transform: scale(1.05);
 }
 
-// Content area
 .itemContent {
   padding: 1.5rem;
   
@@ -181,7 +172,6 @@
   }
 }
 
-// Responsive design
 @media (max-width: 768px) {
   .newsEventsContainer {
     padding: 2rem 1rem;
