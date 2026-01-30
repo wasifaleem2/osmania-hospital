@@ -87,14 +87,19 @@ const NewsEvents = () => {
               const group = groupedData[groupKey];
               const isFirstGroup = index === 0;
 
-              const description =
-                group.items[0]?.content &&
-                group.items[0].content.trim() &&
-                group.items[0].content !== "Detail View of blogs."
-                  ? group.items[0].content.length > 200
-                    ? `${group.items[0].content.substring(0, 200)}...`
-                    : group.items[0].content
-                  : "";
+              const validItem = group?.items?.find(
+                item =>
+                  item?.seoDescription &&
+                  item?.seoDescription?.trim() &&
+                  item?.seoDescription !== "Detail View of blogs."
+              );
+
+              const description = validItem
+                ? validItem?.seoDescription?.length > 200
+                  ? `${validItem?.seoDescription?.substring(0, 200)}...`
+                  : validItem?.seoDescription
+                : "";
+
 
               return (
                 <div key={groupKey} className={styles.eventSection}>
@@ -114,11 +119,11 @@ const NewsEvents = () => {
                           isFirstGroup ? styles.projectCard : styles.awardCard
                         }
                       >
-                        {item.imageUrl && (
+                        {item.imageUrl && item.imageUrl !== "string" && (
                           <div className={styles.itemImage}>
                             <img
                               src={item.imageUrl}
-                              alt={item.title || `Event ${itemIndex + 1}`}
+                              alt={""}
                               loading="lazy"
                             />
                           </div>
