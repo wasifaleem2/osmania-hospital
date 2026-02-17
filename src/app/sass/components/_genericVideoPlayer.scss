@@ -1,0 +1,107 @@
+.rap-video {
+  width: 100%;
+  height: 100% !important;
+  aspect-ratio: 16/9;
+  display: block;
+  object-fit: contain;
+  background: #000;
+}
+
+.rap-controls {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%) !important;
+  padding: 15px !important;
+  opacity: 0;
+  transition: opacity 0.3s ease !important;
+}
+
+.videoPlayerContainer:hover .rap-controls {
+  opacity: 1 !important;
+}
+
+.rap-play-button {
+  background: rgba(231, 76, 60, 0.9) !important;
+  border: 2px solid white !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+
+.rap-play-button:hover {
+  transform: scale(1.1) !important;
+  background: #e74c3c !important;
+}
+
+.rap-play-button svg {
+  width: 16px !important;
+  height: 16px !important;
+  fill: white !important;
+}
+
+.rap-progress {
+  height: 5px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 5px !important;
+}
+
+.rap-progress-filled {
+  background: var(--primary-color, #3498db) !important;
+  border-radius: 5px !important;
+}
+
+.rap-progress-handle {
+  background: white !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  transition: transform 0.2s ease !important;
+}
+
+.rap-progress-handle:hover {
+  transform: scale(1.2) !important;
+}
+
+.rap-volume-bar {
+  width: 80px !important;
+  height: 5px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 5px !important;
+}
+
+.rap-volume-filled {
+  background: white !important;
+  border-radius: 5px !important;
+}
+
+.rap-volume-handle {
+  background: white !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+}
+
+.rap-time {
+  color: white !important;
+  font-size: 14px !important;
+}
+
+.rap-fullscreen-button svg {
+  fill: white !important;
+}
+
+.rap-fullscreen-button:hover svg {
+  transform: scale(1.1) !important;
+}
+
+/* Hide YouTube/Vimeo branding */
+.rap-embed .ytp-chrome-top,
+.rap-embed .ytp-chrome-bottom,
+.rap-embed .ytp-watermark,
+.rap-embed .ytp-title,
+.rap-embed .vp-brand,
+.rap-embed .vp-video-wrapper .vp-controls .vp-brand {
+  display: none !important;
+}

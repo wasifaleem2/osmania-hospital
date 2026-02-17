@@ -11,6 +11,7 @@ import BoardOfTrustees from '../Components/BoardOfTrustees';
 import TopVideo from '../Components/TopVideo';
 import ReportDownloadWidget from '../Components/ReportDownloadWidget';
 import CertificationsWidget from '../Components/CertificationsWidget';
+import DashboardLayout from '../Components/Widgets';
 
   const BoardTrusteesData = {
     subtitle: 'MEMBERS',
@@ -101,7 +102,9 @@ const page = () => {
           <TopVideo />
         </Section>
 
-        <ReportDownloadWidget />
+        <DashboardLayout />
+
+        {/* <ReportDownloadWidget /> */}
         
         {/* Start Board of Trustees Section */}
         <Section
@@ -133,8 +136,8 @@ const page = () => {
 
 
         {/* Donation Box Section  */}
-        <DonationBox />
-        <CertificationsWidget />
+        {/* <DonationBox /> */}
+        {/* <CertificationsWidget /> */}
 
       </div>
     );

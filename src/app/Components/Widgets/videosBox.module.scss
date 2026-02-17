@@ -1,0 +1,119 @@
+.videosBox {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  border-radius: 16px;
+  padding: 30px 25px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  
+  @media (max-width: 1200px) {
+    min-height: 400px;
+    padding: 25px 20px;
+  }
+  
+  @media (max-width: 768px) {
+    min-height: 350px;
+    padding: 25px 20px;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.4);
+  }
+  
+  .boxHeader {
+    margin-bottom: 25px;
+    
+    .headerIcon {
+      font-size: 48px;
+      background: rgba(255, 255, 255, 0.2);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      
+      svg {
+        font-size: 32px;
+        color: white;
+      }
+    }
+    
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      color: white;
+      
+      @media (max-width: 1200px) {
+        font-size: 22px;
+      }
+    }
+    
+    .headerSubtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0;
+      color: white;
+    }
+  }
+  
+  .videosContent {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    
+    .description {
+      color: white;
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin: 0;
+      
+      @media (max-width: 1200px) {
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .videosLink {
+    background: white;
+    color: #d35400;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-top: auto;
+    
+    &:hover {
+      background: transparent;
+      color: white;
+      border-color: white;
+      transform: scale(1.05);
+      
+      .linkIcon {
+        transform: translateX(5px);
+      }
+    }
+    
+    .linkIcon {
+      transition: transform 0.3s ease;
+    }
+  }
+}

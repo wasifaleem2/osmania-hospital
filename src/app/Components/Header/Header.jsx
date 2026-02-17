@@ -62,6 +62,7 @@ const Header = ({ isTopBar, variant }) => {
           { label: "Management", href: "/management" },
           { label: "Policies", href: "/policies" },
           { label: "Contact Us", href: "/contact-us" },
+          { label: "Videos", href: "/videos" },
         ],
       },
       {
