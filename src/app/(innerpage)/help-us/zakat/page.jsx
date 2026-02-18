@@ -17,7 +17,7 @@ const zakatData = {
       value: "HYDERABAD RELIEF AND REHABILITATION TRUST",
     },
     { label: "Account No", value: "1001-0081-047180-02-7" },
-    { label: "IBAN", value: "PK76 BAHL 1001 0081 0471 8002" },
+    { label: "IBAN", value: "PK76BAHL1001008104718002" },
     {
       label: "Bank",
       value: "Bank Al-Habib Ltd, Main Branch, I.I.Chundrigar Road, Karachi",

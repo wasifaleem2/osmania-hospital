@@ -33,9 +33,9 @@ const Footer = () => {
       },
     ],
     donationInfo: {
-      accountTitle: 'Hyderabad Relief and Rehabilitation Trust',
-      accountNumber: '0105-8020-1003-0799',
-      bank: 'MCB Bank Ltd.'
+      accountTitle: 'Hyderabad Relief & Rehabilitation Trust',
+      accountNumber: '0182-1002444098',
+      bank: 'Bank Al-Falah Ltd.'
     },
     copyrightText: '© 2024 Osmania Hospital. All Rights Reserved.',
   };

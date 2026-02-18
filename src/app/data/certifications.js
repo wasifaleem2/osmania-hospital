@@ -1,3 +1,18 @@
+export const REPORTSPDF = [
+  {
+    id: 1,
+    title: "Osmania Hospital Souvenir",
+    url: "/assets/pdf/Osmania Hospital Souvenir.pdf",
+    description: "",
+  },
+  {
+    id: 2,
+    title: "Annual Report Osmania 2024",
+    url: "/assets/pdf/AnnualReport-Osmania-2024-PDF-2.pdf",
+    description: "",
+  },
+]
+
 export const CERTIFICATIONS = [
   {
     id: 1,

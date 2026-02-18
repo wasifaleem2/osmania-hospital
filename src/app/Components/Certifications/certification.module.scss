@@ -17,7 +17,7 @@
 .title {
   color: var(--primary-color);
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   position: relative;
   padding-bottom: 1rem;
   text-align: center;
@@ -129,4 +129,85 @@
   .title {
     font-size: 1.6rem;
   }
+}
+
+.certificationCard {
+  // Your existing card styles
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  // &:hover {
+  //   transform: translateY(-4px);
+  //   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  // }
+}
+
+.pdfCard {
+  cursor: pointer;
+
+  // &:hover {
+  //   .pdfIcon {
+  //     transform: scale(1.1);
+  //     color: #007bff;
+  //   }
+
+  //   .pdfThumbnail {
+  //     background-color: #e8f0fe;
+  //   }
+  // }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+
+.pdfThumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.pdfIcon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  color: #dc3545; // Red color for PDF icon
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.pdfThumbnailText {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+// Accessibility focus state
+.pdfCard:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+  border-radius: 8px;
 }

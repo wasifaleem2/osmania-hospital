@@ -14,11 +14,11 @@ const donationData = {
   bankDetails: [
     {
       label: "Title of Account",
-      value: "HYDERABAD RELIEF AND REHABILITATION TRUST",
+      value: "HYDERABAD RELIEF & REHABILITATION TRUST",
     },
-    { label: "Account No", value: "0105-8020-1003-0799" },
-    { label: "IBAN", value: "PK78MUCB0105802010030799" },
-    { label: "Bank", value: "MCB Bank Ltd., Bahadurabad Branch, Karachi" },
+    { label: "Account No", value: "0182-1002444098" },
+    { label: "IBAN", value: "PK39ALFH0182001002444098" },
+    { label: "Bank", value: "Bank Al-Falah Ltd. 0182-Jamshed Road Branch, Karachi, Pakistan" },
   ],
   contactInfo: {
     instruction:

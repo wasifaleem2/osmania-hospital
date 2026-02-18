@@ -5,7 +5,7 @@ import Section from "@/app/Components/Section";
 import React from "react";
 
 const headingData = {
-  title: "Certifications",
+  title: "Annual Report & Certifications",
 };
 
 const page = () => {

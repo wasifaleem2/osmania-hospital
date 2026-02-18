@@ -29,7 +29,7 @@ const Zakat = () => {
             <div className={styles.detailItem}>
               <span className={styles.detailLabel}>IBAN:</span>
               <span className={styles.detailValue}>
-                PK76 BAHL 1001 0081 0471 8002
+                PK76BAHL1001008104718002
               </span>
             </div>
             <div className={styles.detailItem}>
