@@ -39,6 +39,12 @@ jspm_packages/
 # other build files
 out.rar
 
+# large media files
+# https://drive.google.com/file/d/1Y_vwAgo3bWpv3Xg0HKWWcYXYuxtrpCJk/view?usp=sharing
+# https://drive.google.com/file/d/1v5jTTdWr_C3kJXEJ4ua_nXqvPObMLjbi/view?usp=sharing 
+public/assets/pdf/AnnualReport-Osmania-2024-PDF-2.pdf
+public/assets/pdf/Osmania Hospital Souvenir.pdf
+
 # Typescript v1 declaration files
 typings/
 
