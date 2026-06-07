@@ -1,39 +1,27 @@
-import { axiosInstance } from "./instances"
+import { axiosInstance } from "./instances";
 
-export const reportsAPI = async ({data, nic}) => {
-    try {
-        console.log("inside api function..", data, nic)
-        
-        const response = await axiosInstance.get(
-            `client/by-nic/${nic}`,
-            {
-                params: {
-                    ...data,
-                },
-            },
-        )
-        return response;
-    }
-    catch (error) {
-        console.log(error)
-        throw error
-    }
-}
+export const reportsAPI = async ({ data, nic }) => {
+  const response = await axiosInstance.get(`client/by-nic/${nic}`, {
+    params: { ...data },
+  });
+  const client = response.data.data.client;
+  return {
+    data: {
+      nic:         client.regNo,
+      name:        client.name,
+      email:       client.email,
+      phoneNumber: client.phoneNumber,
+      records:     client.records || [],
+    },
+  };
+};
 
-export const allDataAPI = (datafor) => {
-    try {
-        console.log("inside data api function..", datafor)
-        let response = axiosInstance.get(
-            "blogs",
-            {
-                params: {
-                    ...datafor
-                }
-            }
-        )
-        return response;
-    }
-    catch (error) {
-
-    }
-}
+export const allDataAPI = async (datafor) => {
+  const response = await axiosInstance.get("blogs", { params: datafor });
+  return {
+    data: {
+      blogs: response.data.data.blogs,
+      ...response.data.meta,
+    },
+  };
+};
