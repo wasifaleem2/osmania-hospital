@@ -37,9 +37,9 @@ const ReportSlice = createSlice({
         })
         .addCase(FetchReports.fulfilled, (state, action)=> {
             state.loading = false;
-            console.log("payload received", action.payload)
+            console.log("payload received", action.payload?.data?.client)
             if(action?.payload?.data){
-              state.reports = action.payload?.data
+              state.reports = action.payload?.data?.data?.client
               state.error = ""
             } else {
               console.log("error in payload")
